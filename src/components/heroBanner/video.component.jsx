@@ -282,7 +282,7 @@ function Video(props){
                     <source src='https://3bh.mx/api/wp-content/uploads/2021/07/videofinal-web1080DiscordNitroSmall.mp4' />
                 </video> */}
 
-                <ReactPlayer width='100%' height="100vh"  loop={true} className="videoMobile" ref={video} muted={muteState} playing={true} url="https://3bh.mx/api/wp-content/uploads/2021/07/videofinal-web1080DiscordNitroSmall.mp4" />
+                <ReactPlayer width='100%' height="100vh"  loop={true} className="videoMobile" ref={video} muted={muteState} playsinline={true} playing={true} url="https://3bh.mx/api/wp-content/uploads/2021/07/videofinal-web1080DiscordNitroSmall.mp4" />
 
             </MobileView>
 
