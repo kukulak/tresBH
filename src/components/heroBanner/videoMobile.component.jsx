@@ -254,10 +254,10 @@ function Video(props){
             <div className="btnContenedor">
                 
                 <button ref={btn} id={ props.btn } onClick={()=> {
-                    HideMuter(muter);
+                    // HideMuter(muter);
                     ctrVideo(video);
-                    handleToggleMuted();
-                    HideBtn(btn);
+                    // handleToggleMuted();
+                    // HideBtn(btn);
                     }} className="audifonos">
                     <img src={audifonos}  alt="activar" />
                     <p>Activar Sonido</p>
