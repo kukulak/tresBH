@@ -3,9 +3,17 @@ import './home.styles.scss';
 import FixedMenu from '../../fixedMenu/fixedMenu.component';
 import HeroBanner from '../../heroBanner/heroBanner.component';
 // IMPORT MODULES
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
 
+import Footer from '../../footer/footer.component';
 
-
+import Proyectos from '../../projectos/Proyectos.component';
+import ProyectosMobile from '../../ProjectosMobile/ProyectosMobile.component';
 
 const HomePage = () => (
     <div className="homepage">
@@ -16,7 +24,13 @@ const HomePage = () => (
 
      
         <HeroBanner />
-        {/* <Proyectos /> */}
+        <BrowserView>
+            {/* <Proyectos /> */}
+        </BrowserView>
+        <MobileView>
+             {/* <ProyectosMobile /> */}
+        </MobileView>
+
         {/* <DescansoUno /> */}
         {/* <Video category='18' video='second' muter='mSecond' btn='btnSecond'/> */}
         {/* <HomeInstagram /> */}
@@ -26,6 +40,9 @@ const HomePage = () => (
         {/* <AnimatedBackground /> */}
 {/* 
         */}
+
+        {/* <Footer/> */}
+        
 
     </div>
 )

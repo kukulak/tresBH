@@ -1,0 +1,220 @@
+$brightColor: #aaa;
+$medColor: #666;
+$darkColor: #222;
+$blueColor: #009DEF;
+
+.footer{
+    padding: 4.5%;
+    height: 60vh;
+    width: 91%;
+    z-index: 10001;
+    position: absolute;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    
+    .btnFooter{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  
+        grid-gap: 80px;
+        grid-row-gap: 30px;
+        // margin: 8.5%;
+        .btnFlecha{
+            font-size: 1.8em;
+            color: #ddd;
+            align-items: baseline;
+            height: inherit;
+        }
+    }
+    .logoFooter{
+        // margin: 8.5%;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        color: white;
+        justify-self: start;
+        width: 500px;
+        align-self: end;
+    }
+    .contactoFooter{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        color: white;
+        font-size: 4em;
+        justify-self: end;
+        // margin-right: 100px;
+        &::before{
+            content: ' ';
+            // background-color: white;
+            width: 90px;
+            height: 70px;
+            position: absolute;
+            margin-left: -90px;
+            margin-top: 27px;
+            background-image: url("../../assets/iconos/sobre.svg");
+            background-repeat: no-repeat;
+        }
+        &::after{
+            content: ' ';
+            width: 8.5em;
+            height: 0.1em;
+            position: absolute;
+            background-color: $blueColor;
+            margin: 1.1em 0 0 -8.5em;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .infoFooter{
+        display: grid;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        justify-self: end;
+        align-self: end;
+        // margin-right: 100px;
+        .redesFooter{
+            .redes{
+                display: flex;
+                place-content: flex-end;
+                gap: 1em;
+                margin: 0;
+                margin-bottom: 20px;
+                a{
+                    width: 55px;
+                }
+                img{
+                    width: 55px;
+                }
+            }
+        }
+        .legalesFooter{
+            color: white;
+            display: flex;
+            gap: 20px;
+            align-items: baseline;
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .footer{
+        border-top: solid 1px $blueColor;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        height: auto;
+
+        .btnFooter{
+            margin: 20px 0;
+            gap: 30px;
+            justify-self: start;
+            .btnFlecha{
+                font-size: 1.5em;
+                svg{
+                    height: 9px;
+                    width: 9px;
+                }
+            }
+
+        }
+
+        .contactoFooter{
+            margin: 40px 0 40px 43px;
+            font-size: 1.5em;
+            grid-column-start: 1;
+            grid-row-start: 2;
+            justify-self: start;
+
+            &::after{
+                margin-top: 27px;
+            }
+            &::before{
+                margin-top: 8px;
+                width: 40px;
+                height: 70px;
+                margin-left: -43px;
+            }
+        }
+        .logoFooter{
+            grid-column-start: 1;
+            grid-row-start: 3;
+            justify-self: start;
+            width: 80%;
+            margin-top: 30px;
+
+        }
+        .infoFooter{
+            grid-column-start: 1;
+            grid-row-start: 4;
+            justify-self: start;
+            .legalesFooter{
+                margin-bottom: 100px;
+                flex-direction: column;
+                align-items: center;
+                p:nth-child(2){
+                    display: none;
+                }
+                p:nth-child(4){
+                    display: none;
+                }
+            }
+            .redesFooter{
+                .redes{
+                    margin: 60px auto 20px auto;
+                    place-content: flex-start;
+                    a{
+                        text-align: left;
+
+                    }
+                }
+                img{
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+  }
+
+
+  @media screen and (max-width: 400px) {
+    .footer{
+
+        .infoFooter{
+            justify-self: center;
+            .redesFooter{
+                display: grid;
+                justify-content: center;
+                .redes{
+                    display: grid;
+                    justify-content: center;
+                    margin: 80px auto 40px auto;
+                    place-content: flex-start;
+                    a{
+                        text-align: left;
+                        
+                    }
+                }
+                img{
+                    width: 50px;
+                }
+            }
+        }
+  }
+}
+
+
+// footer contacto sobre margin top 8 a partir de 1418 de pantalla y los botones el gap bajarlo a 30

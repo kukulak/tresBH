@@ -1,0 +1,31 @@
+$brightColor: #aaa;
+$medColor: #333;
+$darkColor: #222;
+$blueColor: #009DEF;
+
+
+.btnFlecha{
+
+    color: $brightColor;
+    display: flex;
+    text-decoration: none;
+    align-items: baseline;
+    justify-content: start;
+    justify-items: end;
+    font-size: 3em;
+   
+    svg{
+
+        transform: rotateX(180deg);
+        height: inherit;
+        height: 15px;
+        width: 15px;
+        margin-left: 5px;
+      }
+    img{
+        transform: rotateX(180deg);
+        height: inherit;
+        height: 15px;
+        margin-left: 5px;
+    }
+}
