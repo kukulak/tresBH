@@ -9,34 +9,62 @@ $blueColor: #009DEF;
 
 .contenedorProjects{
     color: $brightColor;
-    display: flex;
+    // display: flex;
     
-    height: 90vh;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    // height: 90vh;
+    // align-items: center;
+    // justify-content: flex-start;
+    // align-content: center;
+    // flex-wrap: nowrap;
+    // flex-direction: row;
+    .swiper-container {
+        overflow: visible;
+    }
+    .swiper-slide {
+        align-items: center;
+        direction: ltr;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+    .swiper-scrollbar{
+        // margin-top: 50px;
+        bottom: -50px;
+        height: 1px;
+    }
+    .swiper-scrollbar-drag{
+        height: 1px;
+        background-color: $blueColor;
+        // width: 40% !important;
+    }
 }
 
 
 .projects{
     display: flex;
     gap: 26px;
-    margin: 0 130px;
+    // margin: 0 130px;
+    display: grid;
+    grid-auto-flow: column;
+    width: max-content;
+
+
 }
 
 .cp1{ 
-    margin-top: -35px;
+    margin-top: 15px;
 }
 
 .cp2{
-    margin-top: -350px;
+    margin-top: -40px;
 }
 
 
 .proPic{
+    // overflow: hidden;
     img{
+        width: 328px;
+        height: 286px;
         box-shadow: 0 0 200px 11px #0000001f;
         box-shadow: 0 0 10px 0px #0000001f;
         max-width: 500px;
@@ -56,7 +84,7 @@ $blueColor: #009DEF;
 }
 
 .proTitulo{
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0;
 }
 
@@ -72,16 +100,16 @@ $blueColor: #009DEF;
 
 .btnFlecha{
     align-self: end;
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 
 .centrarBtn{
     display: grid;
     justify-content: center;
     padding: 0 0 120px 0;
-    margin: -50px 0 10px 0;
+    margin: 100px 0 10px 0;
     .btnFlecha{
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -142,4 +170,51 @@ $blueColor: #009DEF;
     overflow-x: clip;
     transition: top 0.5s;
     top: 0;
+    .titulo{
+        margin-bottom: 70px;
+    }
+}
+
+
+@media screen and (max-width: 1120px){
+    .contenedorProjects{
+        color: $brightColor;
+        // display: flex;
+        
+        // height: 90vh;
+        // align-items: center;
+        // justify-content: flex-start;
+        // align-content: center;
+        // flex-wrap: nowrap;
+        // flex-direction: row;
+        .swiper-container {
+            overflow: visible;
+        }
+        .swiper-slide {
+            align-items: center;
+            direction: ltr;
+            display: flex;
+            justify-content: center;
+            width: 90%;
+        }
+        .swiper-scrollbar{
+            // margin-top: 50px;
+            bottom: -50px;
+            height: 1px;
+        }
+        .swiper-scrollbar-drag{
+            height: 1px;
+            background-color: $blueColor;
+            // width: 40% !important;
+        }
+    }
+    .spaceProjects{
+        overflow-x: clip;
+        transition: top 0.5s;
+        top: 0;
+        .titulo{
+            font-size: 2em;
+            margin-bottom: 70px;
+        }
+    }
 }

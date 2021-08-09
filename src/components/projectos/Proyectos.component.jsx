@@ -1,6 +1,19 @@
 import React, { Component, useState, useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
 // import './homepage.styles.scss';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+
+
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, A11y, EffectCoverflow } from 'swiper';
+
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -16,6 +29,14 @@ import BtnFlecha from '../globals/btnFlecha/btnFlecha.component';
 
 
 import TituloFlecha from '../globals/TituloFlecha/TituloFlecha.component'
+
+
+// Install modules
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, EffectCoverflow]);
+
+
+
+
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -92,7 +113,7 @@ function doUltraClass(number){
     return number;
 }
   
-  
+// const swiper = new Swiper(...);
 
 function Proyectos() {
 
@@ -100,34 +121,34 @@ function Proyectos() {
     const [projects, setProjects] = useState([]);   
     const [ultraClass, setUltraClass] = useState([]);
     
-        useEffect(() => {
-            gsap.fromTo(pro.current,
-                {
-                    // x: "-220%",
-                    x: -3420,
-                    y: 1,
-                    ease: 'none',
-                    duration: 2
-                },
-                {
-                    x: 400,
-                    ease: 'none',
-                    duration: 2,
-                    scrollTrigger:{
-                        trigger: pro.current,
-                        start: "300px center",
-                        // end: "bottom 100px",
-                        end: () => "+=" + document.querySelector(".contenedorProjects").offsetWidth,
-                        pin: ".spaceProjects",
-                        // pinSpacing: false,
-                        // scrub: true,
-                        scrub: 1,
-                        markers: false,
-                        toggleActions: "play pause resume pause",
-                    },
-                }
-            )
-        }, [pro]);
+        // useEffect(() => {
+        //     gsap.fromTo(pro.current,
+        //         {
+        //             // x: "-220%",
+        //             x: -3420,
+        //             y: 1,
+        //             ease: 'none',
+        //             duration: 2
+        //         },
+        //         {
+        //             x: 400,
+        //             ease: 'none',
+        //             duration: 2,
+        //             scrollTrigger:{
+        //                 trigger: pro.current,
+        //                 start: "300px center",
+        //                 // end: "bottom 100px",
+        //                 end: () => "+=" + document.querySelector(".contenedorProjects").offsetWidth,
+        //                 pin: ".spaceProjects",
+        //                 // pinSpacing: false,
+        //                 // scrub: true,
+        //                 scrub: 1,
+        //                 markers: false,
+        //                 toggleActions: "play pause resume pause",
+        //             },
+        //         }
+        //     )
+        // }, [pro]);
 
     useEffect(()=>{
         let mounted = true;
@@ -160,28 +181,87 @@ function Proyectos() {
 
             <div ref={pro} className='contenedorProjects'>
 
+
+            <Swiper
+                // effect="coverflow"
+                dir="rtl"
+                slidesPerView={'auto'}
+                centeredSlides={true}
+                spaceBetween={30}
+                freeMode={true}
+                // grabCursor={true}
+                autoplay={{ "delay": 2500,
+                "disableOnInteraction": false }}
+                // navigation
+                // pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                breakpoints={{
+                    "640": {
+                    //   "slidesPerView": 2,
+                      "spaceBetween": 20
+                    },
+                    "768": {
+                    //   "slidesPerView": 4,
+                      "spaceBetween": 40
+                    },
+                    "1024": {
+                    //   "slidesPerView": 5,
+                      "spaceBetween": 50
+                    }
+                  }}
+                className="mySwiper">
+                {projects.map((item, index) => 
+                    
+                    <SwiperSlide>
+                        <div className={`projects cp${doUltraClass(index)}`}>
+                        {/* <div className='projects'> */}
+                                
+                            <ProyectosPicture img={ fotoProyecto(item.content.rendered)[0] } />
+                            <div className='proInfo'>
+                                <ProyectosTitulo titulo={item.title.rendered} />
+                                <ProyectosDescripcion descripcion={textToHTML(item.excerpt.rendered)}  />
+                                <div className="groupPartner">
+                                    
+                                    { fotosParners(item.content.rendered).map((item) => (
+                                        <ProyectosPartners partners={ item } alt={item.slug}/>
+                                    )) }
+
+                                </div>
+                                <BtnFlecha goTo='dono' txt='ver proyecto' />
+                                </div>
+                            </div>
+                    </SwiperSlide>
+
+                )}
+
+            </Swiper>
+
+
+
+            
+{/* 
             {projects.map((item, index) => 
         
         
-            <div className={`projects cp${doUltraClass(index)}`}>
-                    
-                <ProyectosPicture img={ fotoProyecto(item.content.rendered)[0] } />
-                <div className='proInfo'>
-                    <ProyectosTitulo titulo={item.title.rendered} />
-                    <ProyectosDescripcion descripcion={textToHTML(item.excerpt.rendered)}  />
-                    <div className="groupPartner">
+                <div className={`projects cp${doUltraClass(index)}`}>
                         
-                        { fotosParners(item.content.rendered).map((item) => (
-                            <ProyectosPartners partners={ item } alt={item.slug}/>
-                        )) }
+                    <ProyectosPicture img={ fotoProyecto(item.content.rendered)[0] } />
+                    <div className='proInfo'>
+                        <ProyectosTitulo titulo={item.title.rendered} />
+                        <ProyectosDescripcion descripcion={textToHTML(item.excerpt.rendered)}  />
+                        <div className="groupPartner">
+                            
+                            { fotosParners(item.content.rendered).map((item) => (
+                                <ProyectosPartners partners={ item } alt={item.slug}/>
+                            )) }
 
+                        </div>
+                        <BtnFlecha goTo='dono' txt='ver proyecto' />
+                        </div>
                     </div>
-                    <BtnFlecha goTo='dono' txt='ver proyecto' />
-                    </div>
-                </div>
 
 
-            )}   
+            )}    */}
       
             </div>
 

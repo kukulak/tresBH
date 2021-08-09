@@ -180,7 +180,7 @@
     }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 569px) {
     .video3bh{
         overflow-x: hidden;
         width: 100%;
@@ -188,8 +188,10 @@
             width: 100vw;
             .videoMobile{
                 video{
-                    height: 70% !important;
-                    width: auto;
+                    height: auto !important;
+                    width: 95% !important;
+                    justify-self: center;
+                    align-self: center;
                 }
             }
         }
@@ -198,12 +200,12 @@
         justify-content: normal !important;
         justify-items: center;
         .audifonos{
-            margin-top: -175px;
+            margin-top: 0px;
             transform: scale(0.7);
         }
     
         .muter{
-            margin-top: -175px;
+            margin-top: 0px;
             transform: scale(0.8);
         }
     }

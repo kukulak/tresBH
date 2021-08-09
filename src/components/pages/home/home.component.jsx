@@ -25,10 +25,10 @@ const HomePage = () => (
      
         <HeroBanner />
         <BrowserView>
-            {/* <Proyectos /> */}
+            <Proyectos />
         </BrowserView>
         <MobileView>
-             {/* <ProyectosMobile /> */}
+             <ProyectosMobile />
         </MobileView>
 
         {/* <DescansoUno /> */}
@@ -41,7 +41,7 @@ const HomePage = () => (
 {/* 
         */}
 
-        {/* <Footer/> */}
+        <Footer/>
         
 
     </div>

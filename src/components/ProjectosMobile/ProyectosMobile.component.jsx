@@ -185,9 +185,9 @@ function ProyectosMobile() {
       
             </div>
 
-            <div className="mobile__centrarBtn">
+            {/* <div className="mobile__centrarBtn">
                 <BtnFlecha goTo='dono' txt='Conoce todos los proyectos' />
-            </div>
+            </div> */}
 
         </div>
     
