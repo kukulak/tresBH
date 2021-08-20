@@ -3,13 +3,21 @@ $medColor: #333;
 $darkColor: #222;
 $blueColor: #009DEF;
 
-
+.txtTech{
+    color: $brightColor;
+}
 
     .mobile__homePage{
         overflow-x: hidden;
     }
     
     .mobile__contenedorProjects{
+        .parrafos{
+            display: none;
+        }
+        .txtTech{
+            display: none;
+        }
         align-items: center;
         align-content: center;
         color: $brightColor;
@@ -110,6 +118,10 @@ $blueColor: #009DEF;
                 margin: 0;
             }
         }
+        .parrafo{
+            display: none;
+        }
+        
     }    
 
 
@@ -228,3 +240,4 @@ $blueColor: #009DEF;
     }
 
 }
+

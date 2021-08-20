@@ -6,8 +6,18 @@ $blueColor: #009DEF;
 .homePage{
     overflow-x: hidden;
 }
+.gato{
+    color: $blueColor;
+}
 
-.contenedorProjects{
+.contenedorProjects{ 
+    .parrafos{
+        display: none;
+    }
+    .txtTech{
+        display: none;
+    }
+   
     color: $brightColor;
     // display: flex;
     
@@ -86,6 +96,7 @@ $blueColor: #009DEF;
 .proTitulo{
     font-size: 4rem;
     margin: 0;
+    color: $brightColor;
 }
 
 .proInfo{
@@ -101,6 +112,10 @@ $blueColor: #009DEF;
 .btnFlecha{
     align-self: end;
     font-size: 1.5em;
+}
+
+.proDescripcion{
+    color: $brightColor;
 }
 
 .centrarBtn{
@@ -172,6 +187,80 @@ $blueColor: #009DEF;
     top: 0;
     .titulo{
         margin-bottom: 70px;
+    }
+    .parrafo{
+        display: none;
+    }
+}
+
+.projectsDetail{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: auto;
+
+    .cp1{
+        margin: 0;
+    }
+    .cp2{
+        margin: 0
+    }
+
+    .projects{
+        grid-auto-flow: row;
+        width: auto;
+        justify-items: center;
+        .proPic{
+            width: -webkit-fill-available;
+            height: 70vh;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            overflow: hidden;
+            img{
+                width: auto;
+                height: auto;
+                max-width: none;
+            }
+        }
+        .proInfo{
+            align-items: center;
+            .proTitulo{
+                font-size: 20rem;
+                margin-top: -25vh;
+                z-index: 1;
+                color: rgba(107, 107, 107, 0.582);
+            }
+            .proDescripcion{
+                max-width: 60vw;
+                line-height: 3;
+                font-size: 22px;
+                font-weight: 100;
+                text-align: left;
+            }
+            .groupPartner img {
+                width: 150px;
+            }
+            .btnFlecha{
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 823px) {
+    .projects{
+        grid-auto-flow: row;
+    }
+
+    .cp1{ 
+        margin-top: 0px;
+    }
+    
+    .cp2{
+        margin-top: 0px;
     }
 }
 

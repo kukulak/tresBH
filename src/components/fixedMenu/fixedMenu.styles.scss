@@ -21,7 +21,7 @@ $blueColor: #009DEF;
     grid-column: 1;
     justify-self: start;
     align-self: start;
-    margin: 9%;
+    margin: 5%;
     align-items: center;
     pointer-events: all;
 }
@@ -341,7 +341,7 @@ body{
 }
 
 
-@media screen and (max-width: 823px) {
+@media screen and (max-width: 723px) {
   .menu{
     .fixedMenu{
       .logoHam{

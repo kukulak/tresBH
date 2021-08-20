@@ -1,6 +1,19 @@
 import React, { Component, useState, useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
 // import './homepage.styles.scss';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+
+
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, A11y, EffectCoverflow } from 'swiper';
+
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -11,12 +24,24 @@ import ProyectosTitulo from './ProyectosTitulo.component';
 import ProyectosPicture from './ProyectosPicture.component';
 import ProyectosDescripcion from './ProyectosDescripcion.component';
 import ProyectosPartners from './ProyectosPartners.component';
-
 import BtnFlecha from '../globals/btnFlecha/btnFlecha.component';
-
-import { Route, Link, BrowserRouter, withRouter } from "react-router-dom";
-
 import TituloFlecha from '../globals/TituloFlecha/TituloFlecha.component'
+import Proyectos from './Proyectos.component'
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    withRouter
+  } from "react-router-dom";
+
+// Install modules
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, EffectCoverflow]);
+
+
+
+
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -44,6 +69,11 @@ function fotoProyecto(str) {
     }
   
     var imgPathsS = Object.entries(imageGroup);
+  
+  
+      
+    
+  
   
   
     return imageGroup;
@@ -88,42 +118,14 @@ function doUltraClass(number){
     return number;
 }
   
-  
+// const swiper = new Swiper(...);
 
-function Proyecto(props) {
+function ProyectosAll(match, history) {
 
     const pro = React.createRef();
     const [projects, setProjects] = useState([]);   
     const [ultraClass, setUltraClass] = useState([]);
-    
-        useEffect(() => {
-            gsap.fromTo(pro.current,
-                {
-                    // x: "-220%",
-                    x: -3420,
-                    y: 1,
-                    ease: 'none',
-                    duration: 2
-                },
-                {
-                    x: 400,
-                    ease: 'none',
-                    duration: 2,
-                    scrollTrigger:{
-                        trigger: pro.current,
-                        start: "300px center",
-                        // end: "bottom 100px",
-                        end: () => "+=" + document.querySelector(".contenedorProjects").offsetWidth,
-                        pin: ".spaceProjects",
-                        // pinSpacing: false,
-                        // scrub: true,
-                        scrub: 1,
-                        markers: false,
-                        toggleActions: "play pause resume pause",
-                    },
-                }
-            )
-        }, [pro]);
+
 
     useEffect(()=>{
         let mounted = true;
@@ -136,17 +138,6 @@ function Proyecto(props) {
          return() => mounted = false;
      }, [])
 
-    //  useEffect(() => {
-    //     let mounted = true;
-    //     doUltraClass()
-    //     .then(items => {
-    //         if(mounted){
-    //             setUltraClass(items)
-    //         }
-    //     })
-    //     return() => mounted = false;
-    //  }, [])
-     
     
 
     return(
@@ -156,31 +147,58 @@ function Proyecto(props) {
 
             <div ref={pro} className='contenedorProjects'>
 
-            {projects.map((item, index, match, history) => 
-        
-        
-            <div className={`projects cp${doUltraClass(index)}`}>
-                    
-                <ProyectosPicture img={ fotoProyecto(item.content.rendered)[0] } />
-                <div className='proInfo'>
-                    <ProyectosTitulo titulo={item.title.rendered} />
-                    <ProyectosDescripcion descripcion={textToHTML(item.excerpt.rendered)}  />
-                    <div className="groupPartner">
-                        
-                        { fotosParners(item.content.rendered).map((item) => (
-                            <ProyectosPartners partners={ item } alt={item.slug}/>
-                        )) }
 
-                    </div>
-                    <BtnFlecha
-                    // onClick={() => history.push(`${match.url}${item.id}`)}
-                    goTo='dono'
-                    txt='ver proyecto' />
-                    </div>
-                </div>
+            <Swiper
+            // effect="coverflow"
+            dir="rtl"
+            slidesPerView={'auto'}
+            centeredSlides={true}
+            spaceBetween={30}
+            freeMode={true}
+            // grabCursor={true}
+            autoplay={{ "delay": 2500,
+            "disableOnInteraction": false }}
+            // navigation
+            // pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            breakpoints={{
+                "640": {
+                //   "slidesPerView": 2,
+                    "spaceBetween": 20
+                },
+                "768": {
+                //   "slidesPerView": 4,
+                    "spaceBetween": 40
+                },
+                "1024": {
+                //   "slidesPerView": 5,
+                    "spaceBetween": 50
+                }
+                }}
+            className="mySwiper">
+
+            {projects.map((item, index) =>   
+            <SwiperSlide>
+                                          
+                    <Proyectos
+                        index={index}
+                        img={fotoProyecto(item.content.rendered)[0]}
+                        titulo={item.title.rendered}
+                        descripcion={textToHTML(item.excerpt.rendered)}
+                        parrafo={item}
+                        item={item}
+                        goTo={item.id}
+                        txt='ver proyecto'
 
 
-            )}   
+                    />
+                
+            </SwiperSlide>
+            )}
+
+
+            </Swiper>
+            
       
             </div>
 
@@ -195,4 +213,4 @@ function Proyecto(props) {
 
 }
 
-export default withRouter(Proyecto);
+export default withRouter(ProyectosAll);

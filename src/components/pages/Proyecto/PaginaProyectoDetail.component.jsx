@@ -1,7 +1,8 @@
 import React from 'react';
-import './home.styles.scss';
+import './PaginaProyectoDetail.styles.scss';
 import FixedMenu from '../../fixedMenu/fixedMenu.component';
 import HeroBanner from '../../heroBanner/heroBanner.component';
+import ProyectosDetail from '../../proyectos/ProyectosDetail.component';
 // IMPORT MODULES
 import {
     BrowserView,
@@ -12,10 +13,10 @@ import {
 
 import Footer from '../../footer/footer.component';
 
-import ProyectosAll from '../../proyectos/ProyectosAll.component';
+import Proyectos from '../../proyectos/ProyectosAll.component';
 import ProyectosMobile from '../../ProyectosMobile/ProyectosMobile.component';
 
-const HomePage = () => (
+const PaginaProyectopDetail = () => (
     <div className="homepage">
         {/* <TheCursor/> */}
         <div className="menu"> 
@@ -23,14 +24,9 @@ const HomePage = () => (
         </div>
 
      
-        <HeroBanner />
-        <BrowserView>
-            <ProyectosAll />
-        </BrowserView>
-        <MobileView>
-             <ProyectosMobile />
-        </MobileView>
-
+    
+        <ProyectosDetail />
+ 
         {/* <DescansoUno /> */}
         {/* <Video category='18' video='second' muter='mSecond' btn='btnSecond'/> */}
         {/* <HomeInstagram /> */}
@@ -47,4 +43,4 @@ const HomePage = () => (
     </div>
 )
 
-export default HomePage;
+export default PaginaProyectopDetail;

@@ -2,15 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './btnFlecha.styles.scss';
 // import flecha from '../../assets/iconos/flecha.svg'
-
+import { Route, Link, BrowserRouter, withRouter } from "react-router-dom";
 // import {ReactComponent as Flecha} from '../../assets/iconos/flecha.svg';
+
 
 // IMPORT MODULES
 
 
-const BtnFlecha = (props) => (
+function BtnFlecha(props){
+    
+    const onClick = () =>{
+        console.log("PROPS", props.history)
+        // props.history.push(`${props.match.url}${props.goTo}`);
+        props.history.push(`/proyectos/${props.goTo}`);
 
-    <a href={props.goTo} className="btnFlecha">
+    }
+    
+     return(
+
+        
+    <div
+        onClick = {onClick}
+        // href={props.goTo}
+        className="btnFlecha">
+
         {props.txt}
 
         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 75 75" style={{clipRule:'evenodd',fillRule:'evenodd',strokeLinecap:'round',strokeLinejoin:'round',strokeMiterlimit:11,version:1.1}}>
@@ -20,7 +35,8 @@ const BtnFlecha = (props) => (
 
         </svg>
 
-    </a>
-)
+    </div>
+    );
 
-export default BtnFlecha;
+}
+export default withRouter(BtnFlecha);

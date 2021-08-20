@@ -172,7 +172,7 @@ function Video(props){
         fetch(apiUrl)
         .then(res => res.json())
         .then(items => setVideoState( items ))
-        console.log("THIS IS THE LIST", videoState)
+        console.log("THIS IS THE STATE OF VIDEO", videoState)
     }, [props.category]);
 
     // useEffect(() => {

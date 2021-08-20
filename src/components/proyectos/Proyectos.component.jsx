@@ -1,6 +1,19 @@
 import React, { Component, useState, useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
 // import './homepage.styles.scss';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+
+
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, A11y, EffectCoverflow } from 'swiper';
+
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -11,12 +24,22 @@ import ProyectosTitulo from './ProyectosTitulo.component';
 import ProyectosPicture from './ProyectosPicture.component';
 import ProyectosDescripcion from './ProyectosDescripcion.component';
 import ProyectosPartners from './ProyectosPartners.component';
-
 import BtnFlecha from '../globals/btnFlecha/btnFlecha.component';
-
-import { Route, Link, BrowserRouter, withRouter } from "react-router-dom";
-
 import TituloFlecha from '../globals/TituloFlecha/TituloFlecha.component'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    withRouter
+  } from "react-router-dom";
+
+// Install modules
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, EffectCoverflow]);
+
+
+
+
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -24,8 +47,14 @@ function textToHTML(str){
     var parser = new DOMParser();
     var doc = parser.parseFromString(str, 'text/html');
     var valElement = doc.querySelectorAll('p');
-  
-    return valElement.item(0).innerText
+    var pGroup = []
+    for (let i = 0; i<valElement.length; i++){
+        pGroup[i] = valElement[i].innerText
+        // pGroup[i].write("<br>")
+    }
+    console.log("EL GRUPO", pGroup)
+    // return valElement.item(0).innerText
+    return pGroup
   }
 
 
@@ -88,42 +117,14 @@ function doUltraClass(number){
     return number;
 }
   
-  
+// const swiper = new Swiper(...);
 
-function Proyecto(props) {
+function Proyectos(props) {
 
     const pro = React.createRef();
     const [projects, setProjects] = useState([]);   
     const [ultraClass, setUltraClass] = useState([]);
-    
-        useEffect(() => {
-            gsap.fromTo(pro.current,
-                {
-                    // x: "-220%",
-                    x: -3420,
-                    y: 1,
-                    ease: 'none',
-                    duration: 2
-                },
-                {
-                    x: 400,
-                    ease: 'none',
-                    duration: 2,
-                    scrollTrigger:{
-                        trigger: pro.current,
-                        start: "300px center",
-                        // end: "bottom 100px",
-                        end: () => "+=" + document.querySelector(".contenedorProjects").offsetWidth,
-                        pin: ".spaceProjects",
-                        // pinSpacing: false,
-                        // scrub: true,
-                        scrub: 1,
-                        markers: false,
-                        toggleActions: "play pause resume pause",
-                    },
-                }
-            )
-        }, [pro]);
+
 
     useEffect(()=>{
         let mounted = true;
@@ -136,63 +137,49 @@ function Proyecto(props) {
          return() => mounted = false;
      }, [])
 
-    //  useEffect(() => {
-    //     let mounted = true;
-    //     doUltraClass()
-    //     .then(items => {
-    //         if(mounted){
-    //             setUltraClass(items)
-    //         }
-    //     })
-    //     return() => mounted = false;
-    //  }, [])
-     
-    
 
     return(
-        <div className="spaceProjects">
+  
+        <div className={ `projects cp${doUltraClass(props.index)}` }>
+        {/* <div className='projects'> */}
+                
+            <ProyectosPicture img={ props.img } />
 
-            <TituloFlecha txt="Proyectos"/>
+            <div className='proInfo'>
+                {/* <p>{item.id}</p> */}
+                <ProyectosTitulo titulo={ props.titulo } />
+                <ProyectosDescripcion descripcion={ props.descripcion }  />
 
-            <div ref={pro} className='contenedorProjects'>
-
-            {projects.map((item, index, match, history) => 
-        
-        
-            <div className={`projects cp${doUltraClass(index)}`}>
+                <div className="parrafos">
                     
-                <ProyectosPicture img={ fotoProyecto(item.content.rendered)[0] } />
-                <div className='proInfo'>
-                    <ProyectosTitulo titulo={item.title.rendered} />
-                    <ProyectosDescripcion descripcion={textToHTML(item.excerpt.rendered)}  />
-                    <div className="groupPartner">
-                        
-                        { fotosParners(item.content.rendered).map((item) => (
-                            <ProyectosPartners partners={ item } alt={item.slug}/>
-                        )) }
+                    {textToHTML(props.parrafo.content.rendered).map((parrafo)=>(
+                        <ProyectosDescripcion descripcion={ parrafo }  />
+                    ))}
 
-                    </div>
-                    <BtnFlecha
-                    // onClick={() => history.push(`${match.url}${item.id}`)}
-                    goTo='dono'
-                    txt='ver proyecto' />
-                    </div>
                 </div>
 
+                    <h2 className="txtTech">
+                        <span className="gato">#</span>knowhow es saber que tecnología usar
+                    </h2>
+                <div className="groupPartner">
+                    
+                    { fotosParners(props.item.content.rendered).map((item) => (
+                        <ProyectosPartners partners={ item } alt={item.slug}/>
+                    )) }
 
-            )}   
-      
+                </div>
+
+                <BtnFlecha
+                // onClick={() => history.push(`${match.url}${item.id}`)}
+                goTo={ props.goTo }
+                txt={ props.txt } />
             </div>
-
-            <div className="centrarBtn">
-                <BtnFlecha goTo='/proyectos' txt='Conoce todos los proyectos' />
-            </div>
-
         </div>
-    
+
+      
 
         )
 
 }
 
-export default withRouter(Proyecto);
+export default withRouter(Proyectos);
