@@ -170,7 +170,9 @@ function ProyectosDetail(props) {
 
                     <Proyectos 
                         index={projectState.id}
-                        img={fotoProyecto(projectState.content.rendered)[0]}
+                        images={projectState}
+                        // img={fotoProyecto(projectState.content.rendered)[0]}
+
                         titulo={projectState.title.rendered}
                         // descripcion={textToHTML(projectState.content.rendered)}
                         parrafo={projectState}

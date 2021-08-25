@@ -183,6 +183,7 @@ function ProyectosAll(match, history) {
                     <Proyectos
                         index={index}
                         img={fotoProyecto(item.content.rendered)[0]}
+                        images={item}
                         titulo={item.title.rendered}
                         descripcion={textToHTML(item.excerpt.rendered)}
                         parrafo={item}

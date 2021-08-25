@@ -7,12 +7,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/swiper.scss';
+import "swiper/components/effect-fade/effect-fade.min.css"
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 
 
-import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, A11y, EffectCoverflow } from 'swiper';
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCoverflow } from 'swiper';
 
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -35,7 +36,7 @@ import {
   } from "react-router-dom";
 
 // Install modules
-SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, EffectCoverflow]);
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, EffectCoverflow, EffectFade]);
 
 
 
@@ -65,13 +66,13 @@ function fotoProyecto(str) {
     var pathElement = divGallery.item(0).querySelectorAll('img');
     // var pathNElement = pathElement.getElementsByClassName();
     var imageGroup = [];
-  
+    
     for (let i = 0; i < pathElement.length; i++) {
       
       imageGroup[i] = pathElement[i].attributes.src.value
       
     }
-  
+    console.log("GRUPO DE IMAGENES", imageGroup)
     var imgPathsS = Object.entries(imageGroup);
   
   
@@ -79,6 +80,9 @@ function fotoProyecto(str) {
   
   
   }
+
+
+  
 
 function fotosParners(str) {
     var parser = new DOMParser();
@@ -142,8 +146,44 @@ function Proyectos(props) {
   
         <div className={ `projects cp${doUltraClass(props.index)}` }>
         {/* <div className='projects'> */}
+
+            <div className="proImages">
+               
+
+                    {/* {fotoProyecto(props.images.content.rendered).map((images) =>(
+                      
+                            <ProyectosPicture img={ images } />
+                       
+                    ))} */}
+
+                <Swiper
+                effect={"fade"}
+                // dir="rtl"
+                // slidesPerView={1}
+                // centeredSlides={true}
+                // spaceBetween={30}
+                // freeMode={true}
+                // grabCursor={true}
+                autoplay={{ "delay": 2500, "disableOnInteraction": false }}
+                // navigation={true}
+                // navigation
+                // pagination={{ clickable: true }}
+                // scrollbar={{ draggable: true }}
+                className="mySwiper2">
+
+                    {fotoProyecto(props.images.content.rendered).map((images) =>(
+                        <SwiperSlide>
+                            <ProyectosPicture img={ images } />
+                        </SwiperSlide>
+                    ))}
+
+                </Swiper>
+
+              
+
+            </div>
                 
-            <ProyectosPicture img={ props.img } />
+            {/* <ProyectosPicture img={ props.img } /> */}
 
             <div className='proInfo'>
                 {/* <p>{item.id}</p> */}
