@@ -160,7 +160,7 @@ function Proyectos(props) {
                 effect={"fade"}
                 // dir="rtl"
                 // slidesPerView={1}
-                // centeredSlides={true}
+                centeredSlides={true}
                 // spaceBetween={30}
                 // freeMode={true}
                 // grabCursor={true}

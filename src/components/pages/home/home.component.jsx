@@ -11,7 +11,7 @@ import {
   } from "react-device-detect";
 
 import Footer from '../../footer/footer.component';
-
+import HomeInstagram from '../../HomeInstagram/homeInstagrams.component'
 import ProyectosAll from '../../proyectos/ProyectosAll.component';
 import ProyectosMobile from '../../ProyectosMobile/ProyectosMobile.component';
 

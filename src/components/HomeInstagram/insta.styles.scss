@@ -1,0 +1,75 @@
+
+.sectionInstagram{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    
+    .timeInstagram{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-items: center;
+    gap: 20px;
+    margin-bottom: 100px;
+    
+    .instaImage{
+      justify-self: center;
+      width: 100%;
+      box-shadow: 1px 1px 0px 0px #25252525;
+      // transform: scale(1);
+      transition: 0.5s;
+    } 
+
+    .instaImage:hover{
+      transform: scale(1.05);
+      box-shadow: 10px 12px 250px 0px #34343425;
+      z-index: 5000;
+    }
+  }
+
+
+
+}
+
+.grid1{
+  grid-column-start: 1;
+}
+
+.grid2{
+  grid-column-start: 2;
+}
+
+.grid3{
+  grid-column-start: 3;
+}
+
+.grid4{
+  grid-column-start: 4;
+}
+
+.grid5{
+  grid-column-start: 1;
+}
+
+.grid6{
+  grid-column-start: 2;
+}
+
+.grid7{
+  grid-column-start: 3;
+}
+
+.grid8{
+  grid-column-start: 4;
+}
+
+.grid9{
+  grid-column-start: 1;
+}
+
+.grid0{
+  grid-column-start: 2;
+}
+
+ 
