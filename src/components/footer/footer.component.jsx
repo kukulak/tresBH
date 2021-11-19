@@ -119,9 +119,10 @@ function Footer() {
                     <Redes />
                 </div>
                 <div className="legalesFooter">
-                    <p>3BLUEHOUSE 2021&reg;</p> <p> • </p> 
-                    <a>AVISO LEGAL</a> <p> • </p>
-                    <a>POLITICAS DE PRIVACIDAD</a>        
+                    <p>3BLUEHOUSE 2021&reg;</p>
+                    {/* <p> • </p>  */}
+                    {/* <a>AVISO LEGAL</a> <p> • </p>
+                    <a>POL&Iacute;TICAS DE PRIVACIDAD</a>         */}
                 </div>      
             
             </div>

@@ -19,13 +19,14 @@ $blueColor: #009DEF;
             display: none;
         }
         align-items: center;
+        align-items: flex-start;
         align-content: center;
         color: $brightColor;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 120px;
-        height: 90vh;
+        // height: 90vh;
         justify-content: flex-start;
         // transform: scale(0.55);
         flex-direction: column;
@@ -73,7 +74,8 @@ $blueColor: #009DEF;
     }
     
     .mobile__proTitulo{
-        font-size: 5rem;
+        text-align: left;
+        font-size: 4.5rem;
         margin: 0;
     }
     
@@ -123,9 +125,48 @@ $blueColor: #009DEF;
         }
         
     }    
+.mobile__proDescripcion{
+    text-align: left;
+}
+@media screen and (max-width: 1100px) {
+
+    .mobile__proInfo{
+
+        width: 67%;
+    }
+    .mobile__proPic{
+        margin-right: 20px;
+    }
+    .mobile__projects{
+        display: flex;
+        gap: 0px;
+        margin: 0 30px;
+    }
+}
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
+
+    .mobile__proInfo{
+
+        width: 44%;
+    }
+
+    .mobile__proTitulo{
+        text-align: left;
+        font-size: 3rem;
+    }
+    .mobile__proPic{
+        margin-right: 20px;
+    }
+    .mobile__projects{
+        display: flex;
+        gap: 0px;
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 540px) {
    .mobile__homePage{
         overflow-x: hidden;
     }
@@ -145,7 +186,7 @@ $blueColor: #009DEF;
 
 
    .mobile__projects{
-        width: 75vw;
+        width: 100vw;
         display: flex;
         gap: 0px;
         margin: 0 0px;
@@ -171,6 +212,7 @@ $blueColor: #009DEF;
         display: grid;
         justify-content: center;
         align-content: center;
+        margin-right: 0;
         img{
             box-shadow: 0 0 200px 11px #0000001f;
             box-shadow: 0 0 10px 0px #0000001f;
@@ -194,10 +236,13 @@ $blueColor: #009DEF;
 
    .mobile__proTitulo{
         font-size: 3.5rem;
-        margin: 0;
+        font-size: 2.5rem;
+        text-align: left;
+        margin: 0;  
     }
 
    .mobile__proDescripcion{
+       line-height: 2;
         text-align: left;
     }
 
@@ -206,13 +251,15 @@ $blueColor: #009DEF;
         // padding: 0 20px;
         // padding: 0 28px;
         display: flex;
-        align-self: flex-end;
+        align-self: center;
         flex-wrap: nowrap;
         flex-direction: column;
         align-content: flex-start;
         justify-content: flex-end;
         align-items: flex-start;
         margin-bottom: 50px;
+        width: 75%;
+       
     }
 
    .mobile__btnFlecha{

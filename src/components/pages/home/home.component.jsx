@@ -33,7 +33,7 @@ const HomePage = () => (
 
         {/* <DescansoUno /> */}
         {/* <Video category='18' video='second' muter='mSecond' btn='btnSecond'/> */}
-        {/* <HomeInstagram /> */}
+        <HomeInstagram />
         {/* <DescansoDos/> */}
         {/* <HomePartners /> */}
         {/* <HomeFooter />  */}

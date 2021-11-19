@@ -20,7 +20,7 @@ function ProyectosMobilePicture(props) {
                 trigger: pic.current,
                 start: "top center",
                 // end: "center center",
-                markers: true,
+                markers: false,
                 scrub: 1,
                 toggleActions: "play pause resume reset"
 

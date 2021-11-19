@@ -72,4 +72,62 @@
   grid-column-start: 2;
 }
 
- 
+@media screen and (max-width: 569px) {
+.sectionInstagram{
+
+  .timeInstagram{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-columns: auto;
+
+    justify-items: center;
+    gap: 20px;
+    margin-bottom: 100px;
+  }
+
+}
+
+  .grid1{
+    grid-column-start: 1;
+  }
+  
+  .grid2{
+    grid-column-start: 1;
+  }
+  
+  .grid3{
+    grid-column-start: 2;
+  }
+  
+  .grid4{
+    grid-column-start: 1;
+  }
+  
+  .grid5{
+    grid-column-start: 1;
+  }
+  
+  .grid6{
+    grid-column-start: 2;
+  }
+  
+  .grid7{
+    grid-column-start: 2;
+  }
+  
+  .grid8{
+    grid-column-start: 2;
+  }
+  
+  .grid9{
+    grid-column-start: 1;
+  }
+  
+  .grid0{
+    grid-column-start: 1;
+  }
+  
+
+}

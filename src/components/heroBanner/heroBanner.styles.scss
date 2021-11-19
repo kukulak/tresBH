@@ -161,11 +161,44 @@
 
 @media screen and (max-width: 723px) {
     .video3bh{
-        padding: 90px 0;
+        // padding: 90px 0;
         video{
 
         }
 
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .video3bh{
+        overflow-x: hidden;
+        width: 100%;
+        .btnContenedor{
+            justify-content: normal !important;
+            justify-items: center;
+            padding: 0;
+            .audifonos{
+                margin-top: 5px;
+                transform: scale(0.7);
+            }
+        
+            .muter{
+                margin-top: 5px;
+                transform: scale(0.8);
+            }
+            
+        }
+        div{
+            width: 100vw;
+            .videoMobile{
+                video{
+                    height: 100% !important;
+                    // width: auto;
+                    width: 100% !important;
+                    // height: auto !important;
+                }
+            }
+        }
     }
 }
 
@@ -195,13 +228,14 @@
                     // height: 100% !important;
                     // width: auto;
                     width: 100%;
-                    height: auto !important;
+                    height: 100% !important;
                 }
             }
         }
     }
 
 }
+
 
 @media screen and (max-width: 569px) {
     .video3bh{

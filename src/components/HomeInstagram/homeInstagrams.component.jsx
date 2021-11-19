@@ -22,8 +22,15 @@ import TimeInsta from './insta.component'
 
 
 
-const token = "IGQVJWTzhxb1BQLUd1aHhNdGNicmFzSWhuWS1LSnpkUGQyLTdXWHZA5RVV4WVFjZAWlIb3dUenlxc21RWUVNV21PZAGxaZAlJBVTNtTm1ZAemNOQ21aOWdESHFOUXJKZAHhqU08xX1IwNGZACOWUtZADlhVkxSSQZDZD"
-// "IGQVJXemlRcDEyMG1OQWt6SVZAVaTFkNGk2MFl1alFlWUh5T1BBZAHFTRGdXMm1yQkNrb1ZA2OE9uWTMwME1JQjlnaTh2MzJzeGNHa19LQ1JRV2FsY2ZApbUI3NnFEVV9GWW05dnJVNnJSbTFxdlNxSGJFegZDZD"
+const token = "IGQVJVZA294cUxaM0xlLUJEY2VBd3lKSWluZAFRsUUR2RWVsOGRhdFB4dm9pYkdObkZAtblZAxUlBhQ0tFMU5tUmRfNnZASMUp0THRjYjQxbS0zcnRlVDBvSEV4UUtEWUk4ZAnIxX3R3Y0NGQkVoblRwb0UzYwZDZD"
+
+// CToken
+// "IGQVJXUWZATdm53RjRweDVCVElWaGtqZAGNuSS1seFRQN0JKcVZAfUFdCYUk5ckdkRHpIT0t5SWhqdElnRmZA6UExsM3kxOVB5OEZAhdndreERfWlA5aGFMUnpONFNFNlBKZA0lTamdmMmZAFZA2FUZAHgwRmlUSQZDZD"
+
+
+// danToken
+// IGQVJVZA294cUxaM0xlLUJEY2VBd3lKSWluZAFRsUUR2RWVsOGRhdFB4dm9pYkdObkZAtblZAxUlBhQ0tFMU5tUmRfNnZASMUp0THRjYjQxbS0zcnRlVDBvSEV4UUtEWUk4ZAnIxX3R3Y0NGQkVoblRwb0UzYwZDZD
+
 
 const uId = 17841402888592043
 
@@ -86,9 +93,6 @@ class HomeInstagram extends Component {
                             />
                                 
                         )) }
-
-
-something here
                     </div>
                     </div>
           

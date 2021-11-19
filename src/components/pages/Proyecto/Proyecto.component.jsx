@@ -184,9 +184,9 @@ function Proyecto(props) {
       
             </div>
 
-            <div className="centrarBtn">
+            {/* <div className="centrarBtn">
                 <BtnFlecha goTo='/proyectos' txt='Conoce todos los proyectos' />
-            </div>
+            </div> */}
 
         </div>
     

@@ -94,7 +94,7 @@ function doUltraClass(number){
   
   
 
-function ProyectosMobile() {
+function ProyectosMobile(props) {
 
     const pro = React.createRef();
     const [projects, setProjects] = useState([]);   
@@ -176,7 +176,11 @@ function ProyectosMobile() {
                         )) }
 
                     </div>
-                    <BtnFlecha goTo='dono' txt='ver proyecto' />
+                    {/* <BtnFlecha goTo='dono' txt='ver proyecto' /> */}
+                    <BtnFlecha
+                    // onClick={() => history.push(`${match.url}${item.id}`)}
+                    goTo={ item.id }
+                    txt={ 'ver proyecto' } />
                     </div>
                 </div>
 

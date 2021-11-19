@@ -124,6 +124,9 @@ $blueColor: #009DEF;
 
 .groupPartner{
     display: flex;
+    // CHECK THIS 
+    flex-wrap: wrap;
+    justify-content: center;
     img{
         width: 100px;
     }
@@ -162,59 +165,6 @@ $blueColor: #009DEF;
     }
 }
 
-
-
-// .btnFlecha{
-//     // align-content: flex-end;
-//     // align-self: flex-end;
-//     // align-items: flex-end;
-//     color: $brightColor;
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: nowrap;
-//     font-size: 1.4em;
-//     height: 25px;
-//     justify-content: flex-start;
-//     text-decoration: none;
-
-
-
-//     display: grid;
-//     grid-template-columns: min-content 40px;
-//     flex-direction: row;
-//     flex-wrap: nowrap;
-//     font-size: 1.4em;
-//     height: 25px;
-//     text-decoration: none;
-//     align-items: baseline;
-//     justify-content: start;
-//     justify-items: end;
-//     font-size: xxx-large;
-
-   
-//     svg{
-
-//         transform: rotateX(180deg);
-//         height: inherit;
-//         height: 15px;
-//         width: 15px;
-//         margin-left: 5px;
-//       }
-//     img{
-//         transform: rotateX(180deg);
-//         height: inherit;
-//         height: 15px;
-//         margin-left: 5px;
-//     }
-// }
-
-// .btnFlecha::after{
-//     content: " a";
-//     background-image: url(../../assets/iconos/flecha.svg);
-//     width: 13px;
-//     height: 13px;
-//     position: relative;
-// }
 
 
 .spaceProjects{
@@ -332,6 +282,48 @@ $blueColor: #009DEF;
     }
 }
 
+
+@media screen and (max-width: 1030px) {
+    .projectsDetail{
+
+        .projects{
+            grid-auto-flow: row;
+            .proInfo{
+                .proTitulo{
+                    margin-top: -236px;
+                }
+            }
+            .proImages{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .proPic{
+                            height: 64vh;
+                            align-content: start;
+                            
+                            img{
+                                
+                                margin-bottom: 55vh;
+                                
+                            }
+                        }
+                    } 
+
+                }
+            }
+        }
+    }
+
+    .cp1{ 
+        margin-top: 0px;
+    }
+    
+    .cp2{
+        margin-top: 0px;
+    }
+    // .projectsDetail .projects .proImages .swiper-wrapper .swiper-slide .proPic
+}
+
+
 @media screen and (max-width: 823px) {
     .projects{
         grid-auto-flow: row;
@@ -354,6 +346,50 @@ $blueColor: #009DEF;
     }
 }
 
+@media screen and (max-width: 323px) {
+    .projectsDetail{
+        .projects{
+            grid-auto-flow: row;
+            .proInfo{
+                width: 100%;
+                .proTitulo{
+                    font-size: 3rem;
+                    margin-top: -139px;
+                }
+                .proDescripcion{
+                    max-width: 90vw;
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                }
+            }
+            .proImages{
+                .swiper-wrapper{
+                    .swiper-slide{
+    
+                        .proPic{
+                        
+                            margin-top: 52px;
+                            img{
+                                margin-bottom: 0vh;
+                                box-shadow: 0 0 200px 11px #00000000;
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cp1{ 
+        margin-top: 0px;
+    }
+    
+    .cp2{
+        margin-top: 0px;
+    }
+  
+}
 
 @media screen and (max-width: 1120px){
     .contenedorProjects{

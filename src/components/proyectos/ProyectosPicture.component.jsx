@@ -18,7 +18,7 @@ function ProyectosPicture(props) {
                 toggleActions: "play pause resume reset"
 
             },
-            x: -10,
+            x: -0,
             // rotation: 360,
             ease: 'none',
             duration: 2
