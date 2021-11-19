@@ -1,0 +1,201 @@
+
+
+.descansoUno{
+    margin-top: 180px;
+    padding: 280px 0px 80px;
+    color: #333;
+    background-color: rgb(235, 235, 235);
+    .fraseContainer{
+        margin-top: -140px;
+        text-align: left;
+        font-size: 3rem;
+        display: grid;
+        grid-template-columns:  10% 30% 50% 10%;
+        
+        width: 100%;
+        .imagesDescanso{
+            display: grid;
+            height: 50%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-column: 2;
+            .imgDescanso{
+                grid-column: 1;
+                grid-row: 1;
+                justify-self: center;
+                margin: 23% 0px;
+                box-shadow: 0 0 50px 0 #00000075;
+            }
+            :first-child{
+                width: 44%;
+                align-self: start;
+                justify-self: end;
+                margin-top: 3%;
+                margin-right: 16px;
+                box-shadow: 0 0 50px 0 #00000075;
+            }
+            :last-child{
+                width: 39%;
+                margin-top: 57%;
+                align-self: end;
+                justify-self: start;
+                box-shadow: 0 0 50px 0 #00000075;
+            }
+        }
+        .fraseDescanso1{
+            grid-column: 3;
+            // font-size: 2rem;
+            margin-top: 30%;
+        }
+      }
+      div{
+        background: linear-gradient(
+          145deg
+          ,#ffdbf1,#daf4f2 32%,#7dccf0 74%,#2013bb);
+          background: linear-gradient(
+          145deg
+          ,#888 32%,#06a8f2 74%,);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .descansoUno{
+        // padding: 0;
+        .fraseContainer{
+           
+            grid-template-columns: 10% 80% 10%;
+            grid-template-columns:  10% 35% 50% 10%;
+
+           
+            .imagesDescanso{
+                
+                .imgDescanso{
+               
+                }
+                :first-child{
+                
+                }
+                :last-child{
+                  
+                }
+            }
+            .fraseDescanso1{
+               
+
+
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 790px) {
+
+    .descansoUno{
+        padding: 0;
+        .fraseContainer{
+            font-size: 2rem;
+            grid-template-columns: 10% 80% 10%;
+            grid-template-rows: 1fr 0.6fr;
+            .imagesDescanso{
+                display: grid;
+                margin-top: 60px;
+                height: 50%;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-column: 2;
+                grid-row: 1;
+                transform: scale(1.0);
+                justify-self: center;
+                .imgDescanso{
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-self: center;
+                    margin: 23% 0px;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+                :first-child{
+                    width: 44%;
+                    align-self: start;
+                    justify-self: end;
+                    margin-top: 3%;
+                    margin-right: -16px;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+                :last-child{
+                    margin-left: -16px;
+                    width: 39%;
+                    margin-top: 57%;
+                    align-self: end;
+                    justify-self: start;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+            }
+            .fraseDescanso1{
+                margin-top: -2%;
+                grid-column: 2;
+                grid-row: 2;
+                margin-bottom: 30px;
+
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .descansoUno{
+        padding: 0;
+        .fraseContainer{
+            font-size: 1.5rem;
+            grid-template-columns: 10% 80% 10%;
+            grid-template-rows: 1fr 0.6fr;
+            .imagesDescanso{
+                display: grid;
+                height: 50%;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-column: 2;
+                grid-row: 1;
+                transform: scale(0.7);
+                justify-self: center;
+                .imgDescanso{
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-self: center;
+                    margin: 23% 0px;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+                :first-child{
+                    width: 44%;
+                    align-self: start;
+                    justify-self: end;
+                    margin-top: 3%;
+                    margin-right: -16px;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+                :last-child{
+                    margin-left: -16px;
+                    width: 39%;
+                    margin-top: 57%;
+                    align-self: end;
+                    justify-self: start;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+            }
+            .fraseDescanso1{
+                margin-top: -10%;
+                grid-column: 2;
+                grid-row: 2;
+                margin-bottom: 30px;
+
+
+            }
+        }
+    }
+}

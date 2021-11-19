@@ -1,0 +1,129 @@
+$brightColor: #aaa;
+$medColor: #333;
+$darkColor: #222;
+$blueColor: #009DEF;
+
+.homePage{
+    overflow-x: hidden;
+}
+
+.contenedorProjects{
+    color: $brightColor;
+    display: flex;
+    
+    height: 90vh;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+.projects{
+    display: flex;
+    gap: 26px;
+    margin: 0 130px;
+}
+
+.cp1{ 
+    margin-top: -35px;
+}
+
+.cp2{
+    margin-top: -350px;
+}
+
+
+.proPic{
+    img{
+        box-shadow: 0 0 200px 11px #0000001f;
+        box-shadow: 0 0 10px 0px #0000001f;
+        max-width: 500px;
+    }
+}
+
+.proV1{
+    margin-top: -170px;
+}
+
+
+.groupPartner{
+    display: flex;
+    img{
+        width: 100px;
+    }
+}
+
+.proTitulo{
+    font-size: 5rem;
+}
+
+.proInfo{
+    display: flex;
+    align-self: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.btnFlecha{
+    // align-content: flex-end;
+    // align-self: flex-end;
+    // align-items: flex-end;
+    color: $brightColor;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 1.4em;
+    height: 25px;
+    justify-content: flex-start;
+    text-decoration: none;
+
+
+
+    display: grid;
+    grid-template-columns: min-content 40px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 1.4em;
+    height: 25px;
+    text-decoration: none;
+    align-items: baseline;
+    justify-content: start;
+    justify-items: end;
+    font-size: xxx-large;
+
+   
+    svg{
+
+        transform: rotateX(180deg);
+        height: inherit;
+        height: 15px;
+        width: 15px;
+        margin-left: 5px;
+      }
+    img{
+        transform: rotateX(180deg);
+        height: inherit;
+        height: 15px;
+        margin-left: 5px;
+    }
+}
+
+// .btnFlecha::after{
+//     content: " a";
+//     background-image: url(../../assets/iconos/flecha.svg);
+//     width: 13px;
+//     height: 13px;
+//     position: relative;
+// }
+
+
+.spaceProjects{
+    overflow-x: clip;
+    transition: top 0.5s;
+    top: 0;
+}

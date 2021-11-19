@@ -14,6 +14,7 @@ import Footer from '../../footer/footer.component';
 import HomeInstagram from '../../HomeInstagram/homeInstagrams.component'
 import ProyectosAll from '../../proyectos/ProyectosAll.component';
 import ProyectosMobile from '../../ProyectosMobile/ProyectosMobile.component';
+import DescansoUno from './descansoUno.component'
 
 const HomePage = () => (
     <div className="homepage">
@@ -31,7 +32,7 @@ const HomePage = () => (
              <ProyectosMobile />
         </MobileView>
 
-        {/* <DescansoUno /> */}
+        <DescansoUno />
         {/* <Video category='18' video='second' muter='mSecond' btn='btnSecond'/> */}
         <HomeInstagram />
         {/* <DescansoDos/> */}
