@@ -157,7 +157,7 @@ function ProyectosAll(match, history) {
             freeMode={true}
             // grabCursor={true}
             autoplay={{ "delay": 2500,
-            "disableOnInteraction": false }}
+            "disableOnInteraction": true }}
             // navigation
             // pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}

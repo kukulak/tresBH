@@ -164,9 +164,9 @@ function Proyectos(props) {
                 // spaceBetween={30}
                 // freeMode={true}
                 // grabCursor={true}
-                autoplay={{ "delay": 2500, "disableOnInteraction": false }}
+                autoplay={{ "delay": 3500, "disableOnInteraction": false }}
                 // navigation={true}
-                // navigation
+                // navigation   
                 // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
                 className="mySwiper2">
