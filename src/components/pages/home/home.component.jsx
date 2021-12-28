@@ -14,7 +14,11 @@ import Footer from '../../footer/footer.component';
 import HomeInstagram from '../../HomeInstagram/homeInstagrams.component'
 import ProyectosAll from '../../proyectos/ProyectosAll.component';
 import ProyectosMobile from '../../ProyectosMobile/ProyectosMobile.component';
+import Partners from '../../Partners/Partners.component'
+                //  components/Partners/Partners.component.jsx
 import DescansoUno from './descansoUno.component'
+import DescansoDos from './descansoDos.component'
+
 
 const HomePage = () => (
     <div className="homepage">
@@ -36,8 +40,8 @@ const HomePage = () => (
 
         {/* <Video category='18' video='second' muter='mSecond' btn='btnSecond'/> */}
         <HomeInstagram />
-        {/* <DescansoDos/> */}
-        {/* <HomePartners /> */}
+        <DescansoDos/>
+        {/* <Partners /> */}
         {/* <HomeFooter />  */}
         {/* <AnimatedBackground /> */}
 {/* 
