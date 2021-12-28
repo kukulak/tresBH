@@ -8,22 +8,22 @@ import { gsap } from "gsap";
 function ProyectosPicture(props) {
     const pic = React.createRef();
 
-    useEffect(() => {
-        gsap.to(pic.current, {
-            scrollTrigger:{
-                trigger: ".proPic",
-                start: "top center",
-                // end: "center center",
-                markers: false,
-                toggleActions: "play pause resume reset"
+    // useEffect(() => {
+    //     gsap.to(pic.current, {
+    //         scrollTrigger:{
+    //             trigger: ".proPic",
+    //             start: "top center",
+    //             // end: "center center",
+    //             markers: false,
+    //             toggleActions: "play pause resume reset"
 
-            },
-            x: -0,
-            // rotation: 360,
-            ease: 'none',
-            duration: 2
-        })
-    }, [pic]);
+    //         },
+    //         x: -0,
+    //         // rotation: 360,
+    //         ease: 'none',
+    //         duration: 2
+    //     })
+    // }, [pic]);
 
     return(
 

@@ -148,7 +148,7 @@ function ProyectosAll(match, history) {
             <div ref={pro} className='contenedorProjects'>
 
 
-            <Swiper
+            {/* <Swiper
             // effect="coverflow"
             dir="rtl"
             slidesPerView={'auto'}
@@ -175,10 +175,10 @@ function ProyectosAll(match, history) {
                     "spaceBetween": 50
                 }
                 }}
-            className="mySwiper">
+            className="mySwiper"> */}
 
             {projects.map((item, index) =>   
-            <SwiperSlide>
+            // <SwiperSlide>
                                           
                     <Proyectos
                         index={index}
@@ -194,11 +194,11 @@ function ProyectosAll(match, history) {
 
                     />
                 
-            </SwiperSlide>
+            // </SwiperSlide>
             )}
 
 
-            </Swiper>
+            {/* </Swiper> */}
             
       
             </div>

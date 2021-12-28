@@ -15,7 +15,7 @@ $blueColor: #009DEF;
 }
 
 .proTitulo{
-    font-size: 4rem;
+    font-size: 3.23rem;
     margin: 0;
     color: $brightColor;
     text-shadow: none;
@@ -23,6 +23,11 @@ $blueColor: #009DEF;
 }
 
 .proImages{
+    .proPic{
+        img{
+            max-width: 24vw;
+        }
+    }    
     .swiper-wrapper {
         // align-items: center;
         // direction: ltr;
@@ -68,7 +73,11 @@ $blueColor: #009DEF;
     }
    
     color: $brightColor;
-    // display: flex;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 150px;
     
     // height: 90vh;
     // align-items: center;
@@ -112,11 +121,17 @@ $blueColor: #009DEF;
 }
 
 .cp1{ 
-    margin-top: 15px;
+    // margin-top: 15px;
+    .proImages{
+        grid-column-start: 2;
+    }
+    .btnFlecha{
+        align-self: start;
+    }
 }
 
 .cp2{
-    margin-top: -40px;
+    // margin-top: -40px;
 }
 
 
@@ -134,7 +149,7 @@ $blueColor: #009DEF;
     justify-content: center;
     justify-content: flex-start;
     img{
-        width: 100px;
+        width: 75px;
     }
 }
 
@@ -156,6 +171,8 @@ $blueColor: #009DEF;
 }
 
 .proDescripcion{
+    font-size: 1.1rem;
+    line-height: 1.5;
     margin-top: 5px;
     text-align: left;
     color: $brightColor;
@@ -179,7 +196,7 @@ $blueColor: #009DEF;
     top: 0;
     cursor: grab;
     .titulo{
-        margin-bottom: 70px;
+        margin-bottom: 120px;
     }
 
 }
@@ -209,9 +226,14 @@ $blueColor: #009DEF;
         grid-auto-flow: row;
         width: auto;
         justify-items: center;
-      
+    
         
         .proImages{
+            .proPic{
+                img{
+                    max-width: 24vw;
+                }
+            }    
             .swiper-wrapper {
                 // align-items: center;
                 // direction: ltr;

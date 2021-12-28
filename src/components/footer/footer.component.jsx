@@ -113,6 +113,11 @@ function Footer() {
                  <a href="mailto:contacto@3BH.com">contacto@3BH.com
                  </a>
             </div>
+            <div className="adress">
+                <p>Tajín 30 Int.8, Narvarte Poniente,</p> 
+                <p>Benito Juárez C.P. 03020</p> 
+                <p>CDMX, México.</p>
+            </div>
 
             <div className="infoFooter">
                 <div className="redesFooter">

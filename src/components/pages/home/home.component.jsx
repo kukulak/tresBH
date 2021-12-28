@@ -25,6 +25,8 @@ const HomePage = () => (
 
      
         <HeroBanner />
+        <DescansoUno />
+        
         <BrowserView>
             <ProyectosAll />
         </BrowserView>
@@ -32,7 +34,6 @@ const HomePage = () => (
              <ProyectosMobile />
         </MobileView>
 
-        <DescansoUno />
         {/* <Video category='18' video='second' muter='mSecond' btn='btnSecond'/> */}
         <HomeInstagram />
         {/* <DescansoDos/> */}

@@ -37,6 +37,7 @@ const token = "IGQVJXSlZA1RnBzM2cxRlhLMXphX1BSclpuY3Y2QnNLeWZAJa0QwbDNFN3BLSXotZ
 const uId = 17841402888592043
 
 
+const gridArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 
 
 class HomeInstagram extends Component {
@@ -44,7 +45,8 @@ class HomeInstagram extends Component {
     state = {
         error: null,
         isLoaded: false,
-        items: []
+        items: [], 
+        gA: 1
       };
 
       
@@ -82,15 +84,15 @@ class HomeInstagram extends Component {
             return(
 
                 <div className="spaceInstagram">
-                     <TituloFlecha txt="@3BH"/>
+                     <TituloFlecha txt="@3bhmex"/>
                     <div className="sectionInstagram"> 
                     <div className='timeInstagram'> 
                         { items.map( item => (
 
                             <TimeInsta
-                                num={item.id[15]}
+                                num={this.state.gA++}
                                 key={item.id}
-                                id={item.id}
+                                id={item.id} 
                                 media_url={item.media_url}
                             />
                                 

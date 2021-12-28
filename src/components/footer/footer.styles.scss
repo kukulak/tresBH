@@ -35,37 +35,62 @@ $blueColor: #009DEF;
     .logoFooter{
         // margin: 8.5%;
         grid-column-start: 1;
-        grid-row-start: 2;
+        grid-row-start: 3;
         color: white;
         justify-self: start;
         width: 500px;
         align-self: end;
     }
+
+    .adress{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        color: white;
+        text-align: right;
+        font-size: 1.3rem;
+        line-height: 1;
+        align-self: start;
+        justify-self: end;
+        :first-child{
+
+            &::before{
+                content: ' ';
+                width: 90px;
+                height: 29px;
+                position: absolute;
+                margin-left: -30px;
+                margin-top: -2px;
+                background-image: url("../../assets/iconos/pin.svg");
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
     .contactoFooter{
         grid-column-start: 2;
         grid-row-start: 1;
         color: white;
-        font-size: 4em;
+        font-size: 3em;
         justify-self: end;
         // margin-right: 100px;
         &::before{
             content: ' ';
             // background-color: white;
             width: 90px;
-            height: 70px;
+            height: 40px;
             position: absolute;
-            margin-left: -90px;
-            margin-top: 27px;
+            margin-left: -70px;
+            margin-top: 20px;
             background-image: url("../../assets/iconos/sobre.svg");
             background-repeat: no-repeat;
         }
         &::after{
             content: ' ';
-            width: 8.5em;
+            width: 8.7em;
             height: 0.1em;
             position: absolute;
             background-color: $blueColor;
-            margin: 1.1em 0 0 -8.5em;
+            margin: 1.1em 0 0 -8.65em;
         }
         a{
             text-decoration: none;
@@ -75,7 +100,7 @@ $blueColor: #009DEF;
     .infoFooter{
         display: grid;
         grid-column-start: 2;
-        grid-row-start: 2;
+        grid-row-start: 3;
         justify-self: end;
         align-self: end;
         // margin-right: 100px;

@@ -148,7 +148,8 @@ function Proyectos(props) {
         {/* <div className='projects'> */}
 
             <div className="proImages">
-               
+            {/* {fotoProyecto(props.images.content.rendered)[0]} */}
+            <ProyectosPicture img={fotoProyecto(props.images.content.rendered)[Math.floor(Math.random()*3)]} />
 
                     {/* {fotoProyecto(props.images.content.rendered).map((images) =>(
                       
@@ -156,7 +157,7 @@ function Proyectos(props) {
                        
                     ))} */}
 
-                <Swiper
+                {/* <Swiper
                 effect={"fade"}
                 // dir="rtl"
                 // slidesPerView={1}
@@ -177,7 +178,7 @@ function Proyectos(props) {
                         </SwiperSlide>
                     ))}
 
-                </Swiper>
+                </Swiper> */}
 
               
 

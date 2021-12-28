@@ -29,18 +29,10 @@
     
 
         video{
-            // z-index: -1;
-            // width: 100%;
-            // max-height: 100vh;
             grid-column-start: 1;
             grid-row-start: 1;
-            // align-self: start;
-            max-height: 100vh;
-            // height: 100%;
-            // width: auto !important;
-            // max-height: 100vh;
-            // height: 100%;
-            width: 100%;
+            height: 100vh;
+            width: auto;
         }
     // }
 }
@@ -48,7 +40,7 @@
 
 .audifonos{
     justify-self: center;
-    align-self: center;
+    align-self: end;
     // width: 150px;
     width: 12rem;
     height: 12rem;
@@ -121,6 +113,41 @@
 
 
 }
+
+
+.goDown{
+    align-self: end;
+    margin-bottom: 10vh;
+    &::after{
+        animation-duration: 4s;
+        animation-name: upDown;
+        animation-iteration-count: infinite;
+        content: ' ';
+        // background-color: white;
+        width: 90px;
+        height: 30px;
+        position: absolute;
+        margin-left: -37px;  
+        margin-top: 19px;
+        background-image: url("../../assets/iconos/downArrow.svg");
+        background-repeat: no-repeat;
+        opacity: 0.5;
+    }
+}
+
+
+@keyframes upDown {
+    0% { margin-top: 0px;}
+    10% { margin-top: 19px; }
+    // 68%, 72% { margin-top: 25px; }
+    20% { margin-top: 0px; }
+    30% { margin-top: 19px; }
+    40% { margin-top: 0px; }
+    100% { margin-top: 0px; }
+
+
+
+  }
 
 .btnContenedor{
     grid-column-start: 1;
