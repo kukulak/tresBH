@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
-// import './homepage.styles.scss';
+import './Partners.styles.scss';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,9 +24,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import ProyectosTitulo from './ProyectosTitulo.component';
 // import ProyectosPicture from './ProyectosPicture.component';
 // import ProyectosDescripcion from './ProyectosDescripcion.component';
-// import ProyectosPartners from './ProyectosPartners.component';
 // import BtnFlecha from '../globals/btnFlecha/btnFlecha.component';
-// import TituloFlecha from '../globals/TituloFlecha/TituloFlecha.component'
+import ProyectosPartners from '../proyectos/ProyectosPartners.component';
+import TituloFlecha from '../globals/TituloFlecha/TituloFlecha.component'
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -89,7 +90,7 @@ function logosPartners(str) {
     var parser = new DOMParser();
     var doc = parser.parseFromString(str, 'text/html');
     var divGallery = doc.getElementsByClassName('gallery');
-    var pathElement = divGallery.item(1).querySelectorAll('img');
+    var pathElement = divGallery.item(0).querySelectorAll('img');
     var imageGroup = [];
     
     for (let i = 0; i < pathElement.length; i++) {
@@ -113,12 +114,12 @@ function setLogos(){
    
 }   
 // const swiper = new Swiper(...);
-
+    
 function Partners(props) {
 
     const pro = React.createRef();
     const [projects, setProjects] = useState([]);   
-    // const [ultraClass, setUltraClass] = useState([]);
+    const [ultraClass, setUltraClass] = useState([]);
 
 
     useEffect(()=>{
@@ -136,11 +137,18 @@ function Partners(props) {
     return(
   
         <div className='gridPartnerLogos'>
+            <TituloFlecha txt="Partners"/>
             <div className='partnerLogos'>
+                    {/* {props.item.content.rendered} */}
                     
-            { logosPartners(props.item.content.rendered).map((item) => (
-                       <img src={ item } alt={ item.slug } />
+            { projects.map((item) => (
+                logosPartners(item.content.rendered).map((intem) => (
+                        <ProyectosPartners partners={ intem } alt={intem.slug}/>
+                    )) 
+
                     )) }
+
+                
 
             </div>
         </div>
