@@ -1,5 +1,5 @@
 import React from 'react';
-import './PaginaProyectoDetail.styles.scss';
+import './Proyecto.styles.scss';
 import FixedMenu from '../../fixedMenu/fixedMenu.component';
 import HeroBanner from '../../heroBanner/heroBanner.component';
 import ProyectosDetail from '../../proyectos/ProyectosDetail.component';

@@ -25,7 +25,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import ProyectosPicture from './ProyectosPicture.component';
 // import ProyectosDescripcion from './ProyectosDescripcion.component';
 // import BtnFlecha from '../globals/btnFlecha/btnFlecha.component';
-import ProyectosPartners from '../proyectos/ProyectosPartners.component';
+import ProyectosPartners from './PartnersImages.component';
 import TituloFlecha from '../globals/TituloFlecha/TituloFlecha.component'
 
 import {
@@ -59,6 +59,18 @@ function textToHTML(str){
     return pGroup
   }
 
+
+const numFour = (num) => {
+    // num = 1
+    if (num >=4){
+        num = 0
+        // num ++
+    }
+    else{
+        num ++
+    }
+    return num
+}
 
 function fotoProyecto(str) {
     var parser = new DOMParser();
@@ -117,12 +129,15 @@ function setLogos(){
     
 function Partners(props) {
 
+    
+    let x = 0
     const pro = React.createRef();
     const [projects, setProjects] = useState([]);   
     const [ultraClass, setUltraClass] = useState([]);
 
 
     useEffect(()=>{
+        x++
         let mounted = true;
         setLogos()
         .then(items => {
@@ -131,7 +146,7 @@ function Partners(props) {
              }
          })
          return() => mounted = false;
-     }, [])
+     }, [x])
 
 
     return(
@@ -143,7 +158,7 @@ function Partners(props) {
                     
             { projects.map((item) => (
                 logosPartners(item.content.rendered).map((intem) => (
-                        <ProyectosPartners partners={ intem } alt={intem.slug}/>
+                        <ProyectosPartners partners={ intem } alt={intem.slug} />
                     )) 
 
                     )) }

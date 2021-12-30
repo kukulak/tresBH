@@ -26,7 +26,8 @@ import ProyectosDescripcion from './ProyectosDescripcion.component';
 import ProyectosPartners from './ProyectosPartners.component';
 import BtnFlecha from '../globals/btnFlecha/btnFlecha.component';
 import TituloFlecha from '../globals/TituloFlecha/TituloFlecha.component'
-import Proyectos from './Proyectos.component'
+// import Proyectos from './Proyectos.component'
+import Proyectos from '../../components/pages/Proyecto/ProyectoDetail.component'
 
 import { useParams } from "react-router-dom";
 import {
