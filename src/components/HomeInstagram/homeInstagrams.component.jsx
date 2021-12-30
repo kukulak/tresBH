@@ -87,16 +87,20 @@ class HomeInstagram extends Component {
                      <TituloFlecha txt="@3bhmex"/>
                     <div className="sectionInstagram"> 
                     <div className='timeInstagram'> 
-                        { items.map( item => (
+                        { items.map( item => {
+                                if(item.media_url.indexOf('video') === -1){
+                                  return <TimeInsta
+                                  num={this.state.gA++}
+                                  key={item.id}
+                                  id={item.id} 
+                                  media_url={item.media_url}
+                                 />
+                              } else {
+                                return null
+                              }
 
-                            <TimeInsta
-                                num={this.state.gA++}
-                                key={item.id}
-                                id={item.id} 
-                                media_url={item.media_url}
-                            />
-                                
-                        )) }
+                                          
+                        }) }
                     </div>
                     </div>
           
