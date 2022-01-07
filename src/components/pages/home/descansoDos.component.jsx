@@ -80,10 +80,16 @@ function DescansoDos() {
 
     return(    
         <div className="descansoDos">
-             
+             <div className="circleanimation"> </div>
+             <div className="circleanimation1"> </div>
+             <div className="circleanimation2"> </div>
+             <div className="circleanimation3"> </div>
+
+
+                            
             {projects.map(item =>
                 <div className="no-highlight fraseContainerDos">
-                      
+                        
                         <div className="no-highlight fraseDescanso2">
                             { textToHTML(item.content.rendered) }     
                         </div>
