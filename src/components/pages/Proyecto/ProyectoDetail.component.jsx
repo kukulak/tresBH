@@ -53,7 +53,7 @@ function textToHTML(str){
         pGroup[i] = valElement[i].innerText
         // pGroup[i].write("<br>")
     }
-    console.log("EL GRUPO", pGroup)
+    // console.log("EL GRUPO", pGroup)
     // return valElement.item(0).innerText
     return pGroup
   }
@@ -72,7 +72,7 @@ function fotoProyecto(str) {
       imageGroup[i] = pathElement[i].attributes.src.value
       
     }
-    console.log("GRUPO DE IMAGENES", imageGroup)
+    // console.log("GRUPO DE IMAGENES", imageGroup)
     var imgPathsS = Object.entries(imageGroup);
   
   

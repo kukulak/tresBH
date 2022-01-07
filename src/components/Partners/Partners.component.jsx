@@ -54,7 +54,7 @@ function textToHTML(str){
         pGroup[i] = valElement[i].innerText
         // pGroup[i].write("<br>")
     }
-    console.log("EL GRUPO", pGroup)
+    // console.log("EL GRUPO", pGroup)
     // return valElement.item(0).innerText
     return pGroup
   }
@@ -72,6 +72,14 @@ const numFour = (num) => {
     return num
 }
 
+const getNumberFour = (len, index) => {
+    let numberArray = [1, 3, 2, 4]
+    let orderArray = []
+    orderArray.length = len
+    let flatArray = orderArray.fill(numberArray, 0, len/numberArray.length).flat()
+    return flatArray[index]
+}
+
 function fotoProyecto(str) {
     var parser = new DOMParser();
     var doc = parser.parseFromString(str, 'text/html');
@@ -85,7 +93,7 @@ function fotoProyecto(str) {
       imageGroup[i] = pathElement[i].attributes.src.value
       
     }
-    console.log("GRUPO DE IMAGENES", imageGroup)
+    // console.log("GRUPO DE IMAGENES", imageGroup)
     var imgPathsS = Object.entries(imageGroup);
   
   
@@ -110,7 +118,7 @@ function logosPartners(str) {
       imageGroup[i] = pathElement[i].attributes.src.value
       
     }
-    console.log("GRUPO DE LOGOS?", imageGroup)
+    // console.log("GRUPO DE LOGOS?", imageGroup)
     var imgPathsS = Object.entries(imageGroup);
   
   
@@ -155,10 +163,10 @@ function Partners(props) {
             <TituloFlecha txt="Partners"/>
             <div className='partnerLogos'>
                     {/* {props.item.content.rendered} */}
-                    
+                    {/* getNumberFour(logosPartners(item.content.rendered).length) */}
             { projects.map((item) => (
-                logosPartners(item.content.rendered).map((intem) => (
-                        <ProyectosPartners partners={ intem } alt={intem.slug} />
+                logosPartners(item.content.rendered).map((intem, index) => (
+                        <ProyectosPartners partners={ intem } alt={intem.slug} cla={getNumberFour(12, index)} />
                     )) 
 
                     )) }

@@ -27,7 +27,6 @@ class ProyectosPartners extends Component {
 
         <img src={this.props.partners} alt={this.props.alt} />
         
-
     </div>
     )
     }
