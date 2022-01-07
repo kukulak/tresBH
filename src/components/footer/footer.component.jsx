@@ -110,7 +110,7 @@ function Footer() {
             
             <div className="contactoFooter">
                 {/* <Sobre/> */}
-                 <a href="mailto:contacto@3BH.com">contacto@3BH.com
+                 <a href="mailto:contacto@3BH.com">contacto@3BH.mx
                  </a>
             </div>
             <div className="adress">
