@@ -25,3 +25,31 @@
     }
 }
 
+
+@media screen and (max-width: 569px) {
+    .partnerLogos {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        justify-self: center;
+
+        img {
+            width: 125px;
+        }
+    
+        .gridPartner1{
+            grid-column-start: 1;
+        }
+        .gridPartner2{
+            grid-column-start: 1;
+        }
+        .gridPartner3{
+            grid-column-start: 1;
+        }
+        .gridPartner4{
+            grid-column-start: 1;
+        }
+    }
+}
+
+

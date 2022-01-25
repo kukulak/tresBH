@@ -197,15 +197,7 @@
 }
 
 
-@media screen and (max-width: 723px) {
-    .video3bh{
-        // padding: 90px 0;
-        video{
-
-        }
-
-    }
-}
+////////////// 1023
 
 @media screen and (max-width: 1030px) {
     .video3bh{
@@ -239,6 +231,23 @@
         }
     }
 }
+
+
+
+
+
+// @media screen and (max-width: 723px) {
+//     .video3bh{
+//         // padding: 90px 0;
+//         video{
+
+//         }
+
+//     }
+// }
+
+
+/////////////////////////////////////////////////// 823
 
 @media screen and (max-width: 823px) {
     .video3bh{
@@ -275,36 +284,78 @@
 }
 
 
-@media screen and (max-width: 569px) {
-    .video3bh{
-        overflow-x: hidden;
-        width: 100%;
-        div{
-            width: 100vw;
-            .videoMobile{
-                video{
-                    height: auto !important;
-                    width: 95% !important;
-                    justify-self: center;
-                    align-self: center;
+// ////////////////////////////////////////////////////end 823
+
+
+
+////////////////////////////////////////////// 569
+
+    // // en este caso primero mas chico luego mas grande
+    // @media screen and (max-width: 569px) {
+    //     .video3bh{
+    //         width: 10%;
+    //     }
+    //     .btnContenedor{
+    //         .audifonos{
+    //             transform: scale(0.5)
+    //         }
+    //     }
+    // }
+
+    // @media screen and (max-width: 400px) {
+    //     .video3bh{
+    //         width: 10%;
+    //     }
+    //     .btnContenedor{
+    //         .audifonos{
+    //             transform: scale(0.7)
+    //         }
+    //     }
+    // }
+
+
+
+
+    @media screen and (max-width: 569px) {
+        .video3bh{
+            overflow-x: hidden;
+            width: 100%;
+            .btnContenedor{
+                justify-content: normal !important;
+                justify-items: center;
+                .audifonos{
+                    margin-top: 0px;
+                    transform: scale(0.6);
+                    margin-bottom: -10px;
+                }
+            
+                .muter{
+                    margin-top: 0px;
+                    transform: scale(0.8);
+                }
+            }
+            div{
+                width: 100vw;
+                .videoMobile{
+                    video{
+                        height: auto !important;
+                        width: 95% !important;
+                        justify-self: center;
+                        align-self: center;
+                    }
                 }
             }
         }
-    }
-    .btnContenedor{
-        justify-content: normal !important;
-        justify-items: center;
-        .audifonos{
-            margin-top: 0px;
-            transform: scale(0.7);
-        }
     
-        .muter{
-            margin-top: 0px;
-            transform: scale(0.8);
-        }
+    
     }
-}
+    
+    ///////////////////////////////////////////////// end 569
+    
+    
+
+
+/////////////////////////////////////////// min 414 max 767
 
 @media only screen 
   and (min-device-width: 414px) 
@@ -315,6 +366,17 @@
     .video3bh{
         overflow-x: hidden;
         width: 100%;
+        .btnContenedor{
+            .audifonos{
+                margin-top: 5px;
+                transform: scale(0.6);
+            }
+        
+            .muter{
+                margin-top: -5px;
+                transform: scale(0.65);
+            }
+        }
         div{
             width: 100vw;
             .videoMobile{
@@ -326,17 +388,9 @@
         }
     }
 
-    .btnContenedor{
-        .audifonos{
-            margin-top: 5px;
-            transform: scale(0.7);
-        }
-    
-        .muter{
-            margin-top: -5px;
-            transform: scale(0.8);
-        }
-    }
+  
 
 
 }
+/////////////////////////////////////////// end min 414 max 767
+

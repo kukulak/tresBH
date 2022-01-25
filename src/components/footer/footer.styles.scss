@@ -86,11 +86,11 @@ $blueColor: #009DEF;
         }
         &::after{
             content: ' ';
-            width: 8.7em;
+            width: 8.16em;
             height: 0.1em;
             position: absolute;
-            background-color: $blueColor;
-            margin: 1.1em 0 0 -8.65em;
+            background-color: #009DEF;
+            margin: 1.1em 0 0 -8.15em;
         }
         a{
             text-decoration: none;
@@ -146,6 +146,7 @@ $blueColor: #009DEF;
             margin-left: 90px;
 
         }
+   
         .logoFooter{
             justify-self: center;
             grid-column-start: 1;
@@ -271,9 +272,25 @@ $blueColor: #009DEF;
 
   @media screen and (max-width: 400px) {
     .footer{
+        .logoFooter{
+            justify-self: center;
+            grid-column-start: 1;
+            grid-row-start: 4;
+            margin: 70px 0;
+        }
 
+        .adress{
+            grid-column: 1;
+            grid-row: 3;
+            text-align: left;
+            p{
+                margin-left: 32px;
+            }
+        }
         .infoFooter{
             justify-self: center;
+            grid-column: 1;
+            grid-row: 5;
             .redesFooter{
                 display: grid;
                 justify-content: center;

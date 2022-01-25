@@ -162,6 +162,158 @@
   z-index: 5000;
 }
 
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1327px) {
+  .sectionInstagram{
+
+    .timeInstagram{
+      grid-column-start: 2;
+      grid-column-end: 3;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-columns: auto;
+
+      justify-items: center;
+      gap: 20px;
+      margin-bottom: 100px;
+      
+        .instaImage{
+          width: auto;
+          height: 400px;
+      
+        } 
+    }
+
+  }
+
+  .timeInstagram div {
+    // max-width: 360px;
+    // max-height: 360px;
+    // overflow: hidden;
+    display: grid;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    transition: 0.5s;
+    justify-content: center;
+
+  }
+
+
+  .grid1{
+    grid-column-start: 1;
+  }
+  
+  .grid2{
+    grid-column-start: 2;
+  }
+  
+  .grid3{
+    grid-column-start: 1;
+  }
+  
+  .grid4{
+    grid-column-start: 2;
+  }
+  
+  .grid5{
+    grid-column-start: 1;
+  }
+  
+  .grid6{
+    grid-column-start: 3;
+  }
+  
+  .grid7{
+    grid-column-start: 2;
+  }
+  
+  .grid8{
+    grid-column-start: 3;
+  }
+  
+  .grid9{
+    grid-column-start: 1;
+  }
+  
+  .grid0{
+    grid-column-start: 3;
+  }
+  
+
+  .grid10{
+    grid-column-start: 2;
+  }
+
+  .grid11{
+    grid-column-start: 3;
+  }
+
+  .grid12{
+    grid-column-start: 2;
+  }
+
+  .grid13{
+    grid-column-start: 3;
+  }
+
+  .grid14{
+    grid-column-start: 1;
+  }
+
+  .grid15{
+    grid-column-start: 3;
+  }
+
+  .grid16{
+    grid-column-start: 1;
+  }
+
+  .grid17{
+    grid-column-start: 2;
+  }
+
+  .grid18{
+    grid-column-start: 2;
+  }
+
+  .grid19{
+    grid-column-start: 3;
+  }
+
+  .grid20{
+    grid-column-start: 1;
+  }
+
+  .grid21{
+    grid-column-start: 2;
+  }
+
+  .grid22{
+    grid-column-start: 1;
+  }
+
+  .grid23{
+    grid-column-start: 2;
+  }
+
+
+
+}
+
+
+
+
+
+
 @media screen and (max-width: 569px) {
   .sectionInstagram{
 
@@ -178,7 +330,7 @@
       
         .instaImage{
           width: auto;
-          height: 220px;
+          height: 120px;
       
         } 
     }
@@ -190,8 +342,8 @@
     // max-height: 360px;
     // overflow: hidden;
     display: grid;
-    width: 145px;
-    height: 145px;
+    width: 120px;
+    height: 120px;
     overflow: hidden;
     transition: 0.5s;
     justify-content: center;
@@ -299,3 +451,4 @@
 
 
 }
+
