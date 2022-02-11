@@ -114,8 +114,8 @@ function Footer() {
                  </a>
             </div>
             <div className="adress">
-                <p>Tajín 30 Int.8, Narvarte Poniente,</p> 
-                <p>Benito Juárez C.P. 03020</p> 
+                <p>Roma 8, Colonia Juarez</p> 
+                {/* <p>Benito Juárez C.P. 03020</p>  */}
                 <p>CDMX, México.</p>
             </div>
 
