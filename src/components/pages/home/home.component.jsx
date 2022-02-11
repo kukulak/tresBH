@@ -39,6 +39,7 @@ const HomePage = () => (
         </MobileView>
 
         {/* <Video category='18' video='second' muter='mSecond' btn='btnSecond'/> */}
+        
         <HomeInstagram />
         <DescansoDos/>
         <Partners />

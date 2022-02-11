@@ -22,13 +22,13 @@ import TimeInsta from './insta.component'
 
 
 
-const token = "IGQVJXSlZA1RnBzM2cxRlhLMXphX1BSclpuY3Y2QnNLeWZAJa0QwbDNFN3BLSXotZAGxsX1RfWERtUDFHZAHc4N0pLUVNfSGdWODNSQ21SZAlY5eTAyemNXZA0laVFFXSHRYcmo0bUFMT2ppRG5oWk9CWDRCSwZDZD"
+const token = "IGQVJXWUF6OWMwZAlFMSFJVM1JGN3pla0tfSk1lTXhITHVBREtDanN6QW9adDVidVppUG5VdFZASNFduUlE5ZATNfTHljeE9LWkxQX3Q0WE5MeGh2dURRamJEZA3JxWkRiSG5aX052aWNPVDEyaVpSTV9XWQZDZD"
 
 // CToken
 // "IGQVJXUWZATdm53RjRweDVCVElWaGtqZAGNuSS1seFRQN0JKcVZAfUFdCYUk5ckdkRHpIT0t5SWhqdElnRmZA6UExsM3kxOVB5OEZAhdndreERfWlA5aGFMUnpONFNFNlBKZA0lTamdmMmZAFZA2FUZAHgwRmlUSQZDZD"
 
 // tres Token
-// IGQVJXSlZA1RnBzM2cxRlhLMXphX1BSclpuY3Y2QnNLeWZAJa0QwbDNFN3BLSXotZAGxsX1RfWERtUDFHZAHc4N0pLUVNfSGdWODNSQ21SZAlY5eTAyemNXZA0laVFFXSHRYcmo0bUFMT2ppRG5oWk9CWDRCSwZDZD
+// IGQVJXWUF6OWMwZAlFMSFJVM1JGN3pla0tfSk1lTXhITHVBREtDanN6QW9adDVidVppUG5VdFZASNFduUlE5ZATNfTHljeE9LWkxQX3Q0WE5MeGh2dURRamJEZA3JxWkRiSG5aX052aWNPVDEyaVpSTV9XWQZDZD
 
 // danToken
 // IGQVJVZA294cUxaM0xlLUJEY2VBd3lKSWluZAFRsUUR2RWVsOGRhdFB4dm9pYkdObkZAtblZAxUlBhQ0tFMU5tUmRfNnZASMUp0THRjYjQxbS0zcnRlVDBvSEV4UUtEWUk4ZAnIxX3R3Y0NGQkVoblRwb0UzYwZDZD
@@ -86,22 +86,22 @@ class HomeInstagram extends Component {
                 <div className="spaceInstagram">
                      <TituloFlecha txt="@3bhmex"/>
                     <div className="sectionInstagram"> 
-                    <div className='timeInstagram'> 
-                        { items.map( item => {
-                                if(item.media_url.indexOf('video') === -1){
-                                  return <TimeInsta
-                                  num={this.state.gA++}
-                                  key={item.id}
-                                  id={item.id} 
-                                  media_url={item.media_url}
-                                 />
-                              } else {
-                                return null
-                              }
+                      <div className='timeInstagram'> 
+                          { items.map( item => {
+                                  if(item.media_url.indexOf('video') === -1){
+                                    return <TimeInsta
+                                    num={this.state.gA++}
+                                    key={item.id}
+                                    id={item.id} 
+                                    media_url={item.media_url}
+                                  />
+                                } else {
+                                  return null
+                                }
 
-                                          
-                        }) }
-                    </div>
+                                            
+                          }) }
+                      </div>
                     </div>
           
                 </div>
