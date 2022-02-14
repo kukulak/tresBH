@@ -309,38 +309,6 @@ body{
 }
 
 
-@media screen and (max-width: 600px) {
-  .menu{
-    .fixedMenu{
-      .logoHam{
-        background-color: black;
-        width: 99.5vw;
-        // padding: 5% 0 0% 6%;
-        margin: 0;
-        box-shadow: 0 0 63px 60px black;
-        .logo3bh{
-          width: 100px;
-        }
-        .hamCircle{
-         transform: translate(170px, 0) scale(0.7) !important;
-        }
-      }
-      .redes{
-        // display: none;
-            grid-column: 1;
-            margin: 0 14% 9% 0;
-      }
-      .idiomas{
-        display: none;
-      }
-      .mute{
-        display: none;
-      }
-    }
-  }
-}
-
-
 @media screen and (max-width: 723px) {
   .menu{
     .fixedMenu{
@@ -366,6 +334,40 @@ body{
             width: 40px;
 
           }
+      }
+      .idiomas{
+        display: none;
+      }
+      .mute{
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+  .menu{
+    .fixedMenu{
+      .logoHam{
+        background-color: transparent;
+        width: 99.9vw;
+        // padding: 5% 0 0% 6%;
+        margin: 0;
+        box-shadow: 0 0 63px 60px rgba(0, 0, 0, 0);
+        .logo3bh{
+          width: 100px;
+        }
+        .hamCircle{
+         transform: translate(170px, 0) scale(0.7) !important;
+        }
+      }
+      .redes{
+        // display: none;
+            grid-column: 1;
+            // margin: 0 14% 9% 0;
       }
       .idiomas{
         display: none;

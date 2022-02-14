@@ -257,6 +257,7 @@
             justify-content: normal !important;
             justify-items: center;
             padding: 0;
+            align-content: center;
             .audifonos{
                 margin-top: 5px;
                 transform: scale(0.7);
@@ -383,7 +384,7 @@
             .videoMobile{
                 video{
                     height: 100% !important;
-                    width: auto;
+                    width: auto !important;
                 }
             }
         }
