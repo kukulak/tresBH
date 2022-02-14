@@ -167,6 +167,19 @@ $blueColor: #009DEF;
 }
 
 @media screen and (max-width: 540px) {
+
+    .mobile__spaceProjects{
+    
+        .titulo{
+            margin: 65px 0 50px;
+            h1{
+                margin: 0;
+            }
+        }
+            
+    }    
+
+
    .mobile__homePage{
         overflow-x: hidden;
     }

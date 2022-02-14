@@ -80,10 +80,10 @@ function DescansoDos() {
 
     return(    
         <div className="descansoDos">
-             <div className="circleanimation"> </div>
-             <div className="circleanimation1"> </div>
-             <div className="circleanimation2"> </div>
-             <div className="circleanimation3"> </div>
+             <div className="circleanimation circle"> </div>
+             <div className="circleanimation1 circle"> </div>
+             <div className="circleanimation2 circle"> </div>
+             <div className="circleanimation3 circle"> </div>
 
 
                             

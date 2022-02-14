@@ -114,9 +114,11 @@ function Footer() {
                  </a>
             </div>
             <div className="adress">
-                <p>Roma 8, Colonia Juarez</p> 
-                {/* <p>Benito Juárez C.P. 03020</p>  */}
-                <p>CDMX, México.</p>
+                <a href="https://www.google.com.mx/maps/place/Roma+8,+Ju%C3%A1rez,+Cuauht%C3%A9moc,+06600+Ju%C3%A1rez,+CDMX/@19.4289345,-99.1559173,20z/data=!4m13!1m7!3m6!1s0x85d1ff2d84b47dc9:0x642fff36dd25db19!2zUm9tYSA4LCBKdcOhcmV6LCBDdWF1aHTDqW1vYywgMDY2MDAgSnXDoXJleiwgQ0RNWA!3b1!8m2!3d19.4288846!4d-99.1560049!3m4!1s0x85d1ff2d84b47dc9:0x642fff36dd25db19!8m2!3d19.4288846!4d-99.1560049" target="_blank" rel="noopener noreferrer">
+                    <p>Roma 8, Colonia Juarez</p> 
+                    {/* <p>Benito Juárez C.P. 03020</p>  */}
+                    <p>CDMX, México.</p>
+                </a>
             </div>
 
             <div className="infoFooter">

@@ -51,17 +51,21 @@ $blueColor: #009DEF;
         line-height: 1;
         align-self: start;
         justify-self: end;
-        :first-child{
-
-            &::before{
-                content: ' ';
-                width: 90px;
-                height: 29px;
-                position: absolute;
-                margin-left: -30px;
-                margin-top: -2px;
-                background-image: url("../../assets/iconos/pin.svg");
-                background-repeat: no-repeat;
+        a{
+            color: white;
+            text-decoration: none;
+            :first-child{
+    
+                &::before{
+                    content: ' ';
+                    width: 90px;
+                    height: 29px;
+                    position: absolute;
+                    margin-left: -30px;
+                    margin-top: -2px;
+                    background-image: url("../../assets/iconos/pin.svg");
+                    background-repeat: no-repeat;
+                }
             }
         }
 
@@ -283,9 +287,13 @@ $blueColor: #009DEF;
             grid-column: 1;
             grid-row: 3;
             text-align: left;
+            justify-self: center;
             p{
                 margin-left: 32px;
             }
+        }
+        .contactoFooter{
+            justify-self: center;
         }
         .infoFooter{
             justify-self: center;

@@ -255,6 +255,10 @@
         -webkit-text-fill-color: transparent;
       }
 
+      .circle{
+        //   position: absolute;
+      }
+
       .circleanimation{
         grid-column-start: 1;
         grid-row-start: 1;
@@ -304,4 +308,23 @@
         margin-top: -843px;
         margin-right: -568px;
       }
+}
+
+
+@media screen and (max-width: 500px){
+    .descansoDos{
+        padding: 50px 0 0;
+        div{
+            background: linear-gradient(145deg,
+                                      #888 2%,
+                                      #06a8f2 74%);
+            -webkit-background-clip: text;
+        }
+        .fraseContainerDos{
+            width: 100vw;
+            .fraseDescanso2{
+                font-size: 23px;
+            }
+        }
+    }
 }
