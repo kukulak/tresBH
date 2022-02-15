@@ -48,6 +48,22 @@
     }
 }
 
+
+@media screen and (max-width: 640px) and (orientation: landscape) {
+.partnerLogos{
+    grid-template-columns: 33% 33% 33%;
+    .gridPartner2 {
+        grid-column-start: 3;
+    }
+    .proPartners{
+        img{
+            width: 110px;
+        }
+    }
+}
+}
+
+
 @media screen and (max-width: 569px) {
     .partnerLogos {
         display: grid;
