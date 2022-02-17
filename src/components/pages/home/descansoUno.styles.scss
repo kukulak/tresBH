@@ -214,10 +214,72 @@
 
 
 
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .descansoUno{
+        padding: 0;
+        .fraseContainer{
+            margin-top: 0px;
+            font-size: 1.5rem;
+            grid-template-columns: 10% 80% 10%;
+            grid-template-rows: 2fr 0.6fr;
+            grid-template-columns: 10% 40% 40% 10%;
+            grid-template-rows: 1fr;
+            align-items: center;
+            height: 90vh;
+            .imagesDescanso{
+                margin-top: 129px;
+                margin-top: 0;
+                display: grid;
+                height: 50%;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-column: 2;
+                grid-row: 1;
+                transform: scale(1);
+                justify-self: center;
+                .imgDescanso{
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-self: center;
+                    margin: -23% 0px;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+                :first-child{
+                    width: 44%;
+                    align-self: start;
+                    justify-self: end;
+                    margin-top: -30%;
+                    margin-right: -16px;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+                :last-child{
+                    margin-left: -16px;
+                    width: 39%;
+                    margin-top: 6%;
+                    align-self: inherit;
+                    justify-self: start;
+                    box-shadow: 0 0 50px 0 #00000075;
+                }
+            }
+            .fraseDescanso1{
+                font-size: 1.1rem;
+                margin-top: -10%;
+                margin-top: 0;
+                grid-column: 3;
+                grid-row: 1;
+                margin-bottom: 30px;
+                text-align: end;
+                justify-self: center;
+
+            }
+        }
+    }
+}
 
 
 
-@media screen and (max-width: 640px) and (orientation: landscape) {
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
     .descansoUno{
         padding: 0;
         .fraseContainer{
@@ -327,7 +389,7 @@
       .circleanimation{
         grid-column-start: 1;
         grid-row-start: 1;
-        border: 5px solid #07a8f2c4;
+        border: 5px solid #07a8f269;
         width: 500px;
         height: 500px;
         border-radius: 1000px;
@@ -340,7 +402,7 @@
       .circleanimation1{
         grid-column-start: 1;
         grid-row-start: 1;
-        border: 5px solid #07a8f2;
+        border: 5px solid #07a8f269;
         width: 100px;
         height: 100px;
         border-radius: 1000px;
@@ -352,7 +414,7 @@
       .circleanimation2{
         grid-column-start: 1;
         grid-row-start: 1;
-        border: 1px solid #07a8f2;
+        border: 1px solid #07a8f269;
         width: 1100px;
         height: 1100px;
         border-radius: 1000px;
@@ -364,7 +426,7 @@
       .circleanimation3{
         grid-column-start: 1;
         grid-row-start: 1;
-        border: 3px solid #07a8f2;
+        border: 3px solid #07a8f269;
         width: 1500px;
         height: 1500px;
         border-radius: 1500px;
@@ -375,9 +437,81 @@
       }
 }
 
-@media screen and (max-width: 640px) and (orientation: landscape) {
+@media screen and (max-width: 1280px) and (orientation: landscape) {
     .descansoDos{
-        padding: 50px 0 0;
+        padding: 117px 0 48px;
+        height: 35vh;
+        .fraseContainerDos{
+            .fraseDescanso2{
+                font-size: 2.5rem;
+                position: absolute;
+                left: 85px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1050px) and (orientation: landscape) {
+    .descansoDos{
+        padding: 55px 0 50px;
+        .fraseContainerDos{
+            .fraseDescanso2{
+                font-size: 2.2rem;
+                position: absolute;
+                left: 85px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+    .descansoDos{
+        padding: 55px 0 65px;
+        .fraseContainerDos{
+            .fraseDescanso2{
+                font-size: 1.8rem;
+                position: absolute;
+                left: 85px;
+            }
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+    .descansoDos{
+        padding: 50px 0 55px;
+        .fraseContainerDos{
+            .fraseDescanso2{
+                font-size: 1.8rem;
+                position: absolute;
+                left: 85px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 740px) and (orientation: landscape) {
+    .descansoDos{
+        padding: 50px 0 55px;
+        .fraseContainerDos{
+            .fraseDescanso2{
+                font-size: 1.5rem;
+                position: absolute;
+                left: 85px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .descansoDos{
+        padding: 50px 0 48px;
         .fraseContainerDos{
             .fraseDescanso2{
                 font-size: 1.5rem;
@@ -391,7 +525,7 @@
 
 @media screen and (max-width: 500px){
     .descansoDos{
-        padding: 50px 0 0;
+        padding: 50px 0 75px;
         div{
             background: linear-gradient(145deg,
                                       #888 2%,

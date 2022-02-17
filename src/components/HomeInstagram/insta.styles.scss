@@ -170,10 +170,9 @@
 
 
 
-
-@media screen and (max-width: 1327px) {
+@media screen and (max-width: 1370px) {
   .sectionInstagram{
-
+    justify-content: center;
     .timeInstagram{
       grid-column-start: 2;
       grid-column-end: 3;
@@ -311,6 +310,20 @@
 
 
 
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+  .timeInstagram div {
+    // max-width: 360px;
+    // max-height: 360px;
+    // overflow: hidden;
+    display: grid;
+    width: 237px;
+    height: 237px;
+    overflow: hidden;
+    transition: 0.5s;
+    justify-content: center;
+
+  }
+}
 
 @media screen and (max-width: 669px) {
   .sectionInstagram{

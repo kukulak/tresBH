@@ -354,7 +354,33 @@
     
     ///////////////////////////////////////////////// end 569
     
-    
+    @media screen and (max-width: 1200px) and (orientation: landscape) {
+        .video3bh{
+            overflow-x: hidden;
+            width: 100%;
+            .btnContenedor{
+                align-content: center;
+                .audifonos{
+                    margin-top: 5px;
+                    transform: scale(0.6);
+                }
+            
+                .muter{
+                    margin-top: -5px;
+                    transform: scale(0.65);
+                }
+            }
+            div{
+                width: 100vw;
+                .videoMobile{
+                    video{
+                        height: 100% !important;
+                        width: auto !important;
+                    }
+                }
+            }
+        }
+    }
 
 
 /////////////////////////////////////////// min 414 max 767

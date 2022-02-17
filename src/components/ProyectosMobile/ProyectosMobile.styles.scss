@@ -166,7 +166,55 @@ $blueColor: #009DEF;
     }
 }
 
-@media screen and (max-width: 640px) and (orientation: landscape) {
+
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .mobile__projects{
+        justify-content: center;
+        .mobile__proPic{
+            width: 273px;
+            height: 243px;
+            img{
+                max-width: 349px;
+            }
+        }
+        .mobile__proInfo{
+            align-self: flex-start;
+            width: 57%;
+            .mobile__proTitulo{    
+                font-size: 2rem;
+            }
+        }
+    }
+    .mobile__groupPartner{
+        display: flex;
+        // display: none;
+        flex-wrap: wrap;
+        margin: 22px 0;
+        img{
+            width: 60px;
+        }
+    }
+
+
+    .mobile__spaceProjects{
+    
+        .titulo{
+            margin: 65px 0 50px;
+            h1{
+                font-size: 1.4em;
+                margin: 0 0 30px;
+            }
+        }
+            
+    }    
+
+
+
+}
+
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
     .mobile__projects{
         .mobile__proPic{
             width: 273px;
