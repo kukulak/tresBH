@@ -206,7 +206,7 @@ $blueColor: #009DEF;
     display: grid;
     justify-content: center;
     align-content: center;
-    width: 100vw;
+    width: 98vw;
     height: auto;
 
     .proTitulo{
@@ -319,7 +319,7 @@ $blueColor: #009DEF;
             grid-auto-flow: row;
             .proInfo{
                 .proTitulo{
-                    margin-top: -236px;
+                    margin-top: -78px;
                 }
             }
             .proImages{
@@ -372,6 +372,22 @@ $blueColor: #009DEF;
             margin-bottom: 55vh;
         
         }
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .projectsDetail .projects .proInfo .proTitulo {
+        margin-top: -120px;
+    }
+}
+@media screen and (max-width: 615px) {
+    .projectsDetail .projects .proInfo .proTitulo {
+        margin-top: -181px;
+    }
+}
+@media screen and (max-width: 515px) {
+    .projectsDetail .projects .proInfo .proTitulo {
+        margin-top: -231px;
     }
 }
 

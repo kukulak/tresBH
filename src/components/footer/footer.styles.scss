@@ -537,21 +537,28 @@ $blueColor: #009DEF;
         .logoFooter{
             justify-self: center;
             grid-column-start: 1;
-            grid-row-start: 4;
+            grid-row-start: 1;
             margin: 70px 0;
+            width: 300px;
         }
 
         .adress{
             grid-column: 1;
-            grid-row: 3;
-            text-align: left;
+            grid-row: 2;
+            text-align: center;
             justify-self: center;
+            margin-left: 0;
             p{
                 margin-left: 32px;
+                margin-top: 0;
             }
         }
         .contactoFooter{
             justify-self: center;
+            margin-left: 53px;
+            &::before{
+                margin-top: 15px;
+            }
         }
         .infoFooter{
             justify-self: center;
@@ -570,7 +577,7 @@ $blueColor: #009DEF;
                         
                     }
                     img{
-                        width: 50px;
+                        width: 37px;
                     }
                 }
             }
