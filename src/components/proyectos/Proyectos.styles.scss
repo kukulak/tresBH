@@ -311,6 +311,58 @@ $blueColor: #009DEF;
 }
 
 
+@media screen and (max-width: 1500px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 7rem; 
+            
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 6.5rem; 
+            
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 6rem; 
+            
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1115px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 5.5rem; 
+            
+                }
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: 1030px) {
     .projectsDetail{
 
@@ -318,7 +370,9 @@ $blueColor: #009DEF;
             grid-auto-flow: row;
             .proInfo{
                 .proTitulo{
-                    margin-top: -236px;
+                    margin-top: -82px;
+                    font-size: 5rem; 
+
                 }
             }
             .proImages{
@@ -352,9 +406,34 @@ $blueColor: #009DEF;
 }
 
 
+@media screen and (max-width: 1000px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 4.2rem; 
+            
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 823px) {
+    
     .projects{
         grid-auto-flow: row;
+        
+    }
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 4rem; 
+            
+                }
+            }
+        }
     }
 
     .cp1{ 
@@ -370,6 +449,45 @@ $blueColor: #009DEF;
       
             margin-bottom: 55vh;
         
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 3.5rem; 
+            
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 3rem; 
+            
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .projectsDetail{
+        .projects{
+            .proInfo{
+                .proTitulo{
+                    font-size: 2.5rem; 
+            
+                }
+            }
         }
     }
 }
